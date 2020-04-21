@@ -477,8 +477,8 @@ void BlockExplorer::showEvent(QShowEvent*)
         updateNavButtons();
 
         if (!GetBoolArg("-txindex", true)) {
-            QString Warning = tr("Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (helium.conf).");
-            QMessageBox::warning(this, "Helium Core Blockchain Explorer", Warning, QMessageBox::Ok);
+            QString Warning = tr("Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (squorum.conf).");
+            QMessageBox::warning(this, "Squorum Core Blockchain Explorer", Warning, QMessageBox::Ok);
         }
     }
 }

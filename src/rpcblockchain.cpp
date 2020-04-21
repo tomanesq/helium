@@ -123,7 +123,7 @@ UniValue blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool tx
         zpivObj.push_back(Pair(to_string(denom), ValueFromAmount(blockindex->mapZerocoinSupply.at(denom) * (denom*COIN))));
     }
     zpivObj.push_back(Pair("total", ValueFromAmount(blockindex->GetZerocoinSupply())));
-    result.push_back(Pair("zHLMsupply", zpivObj));
+    result.push_back(Pair("zSQRsupply", zpivObj));
 
     return result;
 }
@@ -243,7 +243,7 @@ UniValue getrawmempool(const UniValue& params, bool fHelp)
             "{                           (json object)\n"
             "  \"transactionid\" : {       (json object)\n"
             "    \"size\" : n,             (numeric) transaction size in bytes\n"
-            "    \"fee\" : n,              (numeric) transaction fee in HLM\n"
+            "    \"fee\" : n,              (numeric) transaction fee in SQR\n"
             "    \"time\" : n,             (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT\n"
             "    \"height\" : n,           (numeric) block height when transaction entered pool\n"
             "    \"startingpriority\" : n, (numeric) priority when transaction entered pool\n"
@@ -323,17 +323,17 @@ UniValue getblock(const UniValue& params, bool fHelp)
             "  \"previousblockhash\" : \"hash\",  (string) The hash of the previous block\n"
             "  \"nextblockhash\" : \"hash\"       (string) The hash of the next block\n"
             "  \"moneysupply\" : \"supply\"       (numeric) The money supply when this block was added to the blockchain\n"
-            "  \"zHLMsupply\" :\n"
+            "  \"zSQRsupply\" :\n"
             "  {\n"
-            "     \"1\" : n,            (numeric) supply of 1 zHLM denomination\n"
-            "     \"5\" : n,            (numeric) supply of 5 zHLM denomination\n"
-            "     \"10\" : n,           (numeric) supply of 10 zHLM denomination\n"
-            "     \"50\" : n,           (numeric) supply of 50 zHLM denomination\n"
-            "     \"100\" : n,          (numeric) supply of 100 zHLM denomination\n"
-            "     \"500\" : n,          (numeric) supply of 500 zHLM denomination\n"
-            "     \"1000\" : n,         (numeric) supply of 1000 zHLM denomination\n"
-            "     \"5000\" : n,         (numeric) supply of 5000 zHLM denomination\n"
-            "     \"total\" : n,        (numeric) The total supply of all zHLM denominations\n"
+            "     \"1\" : n,            (numeric) supply of 1 zSQR denomination\n"
+            "     \"5\" : n,            (numeric) supply of 5 zSQR denomination\n"
+            "     \"10\" : n,           (numeric) supply of 10 zSQR denomination\n"
+            "     \"50\" : n,           (numeric) supply of 50 zSQR denomination\n"
+            "     \"100\" : n,          (numeric) supply of 100 zSQR denomination\n"
+            "     \"500\" : n,          (numeric) supply of 500 zSQR denomination\n"
+            "     \"1000\" : n,         (numeric) supply of 1000 zSQR denomination\n"
+            "     \"5000\" : n,         (numeric) supply of 5000 zSQR denomination\n"
+            "     \"total\" : n,        (numeric) The total supply of all zSQR denominations\n"
             "  }\n"
             "}\n"
 

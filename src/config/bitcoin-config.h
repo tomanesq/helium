@@ -287,13 +287,13 @@
 #define PACKAGE_BUGREPORT "www.heliumchain.org"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Helium Core"
+#define PACKAGE_NAME "Squorum Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Helium Core 0.15.2"
+#define PACKAGE_STRING "Squorum Core 0.15.2"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "helium"
+#define PACKAGE_TARNAME "squorum"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""

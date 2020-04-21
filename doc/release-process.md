@@ -27,7 +27,7 @@ Check out the source code in the following directory hierarchy.
     git clone https://github.com/heliumchain/helium
     git clone https://github.com/devrandom/gitian-builder.git
 
-### Helium maintainers/release engineers, suggestion for writing release notes
+### Squorum maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -53,7 +53,7 @@ An example of that command using 5 processors and 5000 MB of RAM:
 
 Setup Gitian descriptors:
 
-    pushd ./helium
+    pushd ./squorum
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -87,7 +87,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../helium/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../squorum/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -95,55 +95,55 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url helium=/path/to/helium,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url squorum=/path/to/squorum,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign Helium Core for Linux, Windows, and OS X:
+### Build and sign Squorum Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --memory 3000 --commit helium=v${VERSION} ../helium/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../helium/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/helium-*.tar.gz build/out/src/helium-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit squorum=v${VERSION} ../squorum/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../squorum/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/squorum-*.tar.gz build/out/src/squorum-*.tar.gz ../
 
-    ./bin/gbuild --memory 3000 --commit helium=v${VERSION} ../helium/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../helium/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/helium-*-win-unsigned.tar.gz inputs/helium-win-unsigned.tar.gz
-    mv build/out/helium-*.zip build/out/helium-*.exe ../
+    ./bin/gbuild --memory 3000 --commit squorum=v${VERSION} ../squorum/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../squorum/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/squorum-*-win-unsigned.tar.gz inputs/squorum-win-unsigned.tar.gz
+    mv build/out/squorum-*.zip build/out/squorum-*.exe ../
 
-    ./bin/gbuild --memory 3000 --commit helium=v${VERSION} ../helium/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../helium/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/helium-*-osx-unsigned.tar.gz inputs/helium-osx-unsigned.tar.gz
-    mv build/out/helium-*.tar.gz build/out/helium-*.dmg ../
+    ./bin/gbuild --memory 3000 --commit squorum=v${VERSION} ../squorum/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../squorum/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/squorum-*-osx-unsigned.tar.gz inputs/squorum-osx-unsigned.tar.gz
+    mv build/out/squorum-*.tar.gz build/out/squorum-*.dmg ../
 
-    ./bin/gbuild --memory 3000 --commit helium=v${VERSION} ../helium/contrib/gitian-descriptors/gitian-aarch64.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-aarch64 --destination ../gitian.sigs/ ../helium/contrib/gitian-descriptors/gitian-aarch64.yml
-    mv build/out/helium-*.tar.gz build/out/src/helium-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit squorum=v${VERSION} ../squorum/contrib/gitian-descriptors/gitian-aarch64.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-aarch64 --destination ../gitian.sigs/ ../squorum/contrib/gitian-descriptors/gitian-aarch64.yml
+    mv build/out/squorum-*.tar.gz build/out/src/squorum-*.tar.gz ../
     popd
 
 Build output expected:
 
-  1. source tarball (`helium-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`helium-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`helium-${VERSION}-win[32|64]-setup-unsigned.exe`, `helium-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`helium-${VERSION}-osx-unsigned.dmg`, `helium-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`squorum-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`squorum-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`squorum-${VERSION}-win[32|64]-setup-unsigned.exe`, `squorum-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`squorum-${VERSION}-osx-unsigned.dmg`, `squorum-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import helium/contrib/gitian-keys/*.pgp
+    gpg --import squorum/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../helium/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../helium/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../helium/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-aarch64 ../helium/contrib/gitian-descriptors/gitian-aarch64.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../squorum/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../squorum/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../squorum/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-aarch64 ../squorum/contrib/gitian-descriptors/gitian-aarch64.yml
     popd
 
 ### Next steps:
@@ -165,22 +165,22 @@ Codesigner only: Create Windows/OS X detached signatures:
 
 Codesigner only: Sign the osx binary:
 
-    transfer helium-osx-unsigned.tar.gz to osx for signing
-    tar xf helium-osx-unsigned.tar.gz
+    transfer squorum-osx-unsigned.tar.gz to osx for signing
+    tar xf squorum-osx-unsigned.tar.gz
     ./detached-sig-create.sh -s "Key ID"
     Enter the keychain password and authorize the signature
     Move signature-osx.tar.gz back to the gitian host
 
 Codesigner only: Sign the windows binaries:
 
-    tar xf helium-win-unsigned.tar.gz
+    tar xf squorum-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 Codesigner only: Commit the detached codesign payloads:
 
-    cd ~/helium-detached-sigs
+    cd ~/squorum-detached-sigs
     checkout the appropriate branch for this release series
     rm -rf *
     tar xf signature-osx.tar.gz
@@ -193,25 +193,25 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [helium-detached-sigs](https://github.com/Helium-Project/helium-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [squorum-detached-sigs](https://github.com/heliumchain/helium-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../helium/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../helium/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../helium/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/helium-osx-signed.dmg ../helium-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../squorum/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../squorum/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../squorum/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/squorum-osx-signed.dmg ../squorum-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../helium/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../helium/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../helium/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/helium-*win64-setup.exe ../helium-${VERSION}-win64-setup.exe
-    mv build/out/helium-*win32-setup.exe ../helium-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../squorum/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../squorum/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../squorum/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/squorum-*win64-setup.exe ../squorum-${VERSION}-win64-setup.exe
+    mv build/out/squorum-*win32-setup.exe ../squorum-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -233,17 +233,17 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-helium-${VERSION}-aarch64-linux-gnu.tar.gz
-helium-${VERSION}-arm-linux-gnueabihf.tar.gz
-helium-${VERSION}-i686-pc-linux-gnu.tar.gz
-helium-${VERSION}-x86_64-linux-gnu.tar.gz
-helium-${VERSION}-osx64.tar.gz
-helium-${VERSION}-osx.dmg
-helium-${VERSION}.tar.gz
-helium-${VERSION}-win32-setup.exe
-helium-${VERSION}-win32.zip
-helium-${VERSION}-win64-setup.exe
-helium-${VERSION}-win64.zip
+squorum-${VERSION}-aarch64-linux-gnu.tar.gz
+squorum-${VERSION}-arm-linux-gnueabihf.tar.gz
+squorum-${VERSION}-i686-pc-linux-gnu.tar.gz
+squorum-${VERSION}-x86_64-linux-gnu.tar.gz
+squorum-${VERSION}-osx64.tar.gz
+squorum-${VERSION}-osx.dmg
+squorum-${VERSION}.tar.gz
+squorum-${VERSION}-win32-setup.exe
+squorum-${VERSION}-win32.zip
+squorum-${VERSION}-win64-setup.exe
+squorum-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
@@ -265,10 +265,10 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - bitcointalk announcement thread
 
-  - Optionally twitter, reddit /r/helium, ... but this will usually sort out itself
+  - Optionally twitter, reddit /r/squorum, ... but this will usually sort out itself
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/Helium-Project/Helium/releases/new) with a link to the archived release notes.
+  - Create a [new GitHub release](https://github.com/heliumchain/helium/releases/new) with a link to the archived release notes.
 
   - Celebrate

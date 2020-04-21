@@ -189,9 +189,9 @@
     </message>
     </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>ZSquorumControlDialog</name>
     </context>
 <context>
-    <name>helium-core</name>
+    <name>squorum-core</name>
     </context>
 </TS>

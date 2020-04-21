@@ -62,12 +62,12 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your Helium addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw Heliumadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
+        <source>These are your Squorum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw Squorumadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
     </message>
     <message>
-        <source>These are your Helium addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw Heliumadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your Squorum addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw Squorumadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,16 +172,16 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>Helium will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your HLMs from being stolen by malware infecting your computer.</source>
-        <translation>Helium zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw HLMs stelen.</translation>
+        <source>Squorum will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your SQRs from being stolen by malware infecting your computer.</source>
+        <translation>Squorum zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw SQRs stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Weet u zeker dat u uw portemonnee wilt versleutelen?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HLM&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW HLM VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SQR&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW SQR VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -235,16 +235,16 @@
         <translation>&amp;BIP 38 Versleuteling</translation>
     </message>
     <message>
-        <source>Enter a Helium Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Voer een Helium adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
+        <source>Enter a Squorum Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Voer een Squorum adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adres:</translation>
     </message>
     <message>
-        <source>The Helium address to sign the message with</source>
-        <translation>Het Helium adres om het bericht met te ondertekenen</translation>
+        <source>The Squorum address to sign the message with</source>
+        <translation>Het Squorum adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Helium address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het Helium adres bezit</translation>
+        <source>Sign the message to prove you own this Squorum address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het Squorum adres bezit</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,12 +299,12 @@
         <translation>Voer de BIP 38 versleutelde geheime sleutel in. Voer het wachtwoord in, in het middelste veld. Druk op Ontsleutelen Sleutel om de geheime sleutel te berekenen.  Nadat de geheime sleutel is ontsleuteld, zal het klikken op 'Adres Importeren' de geheime sleutel toevoegen aan de portemonnee.</translation>
     </message>
     <message>
-        <source>The Helium address the message was signed with</source>
-        <translation>Het Helium adres waarmee het bericht was ondertekend</translation>
+        <source>The Squorum address the message was signed with</source>
+        <translation>Het Squorum adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Helium address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde Helium adres</translation>
+        <source>Verify the message to ensure it was signed with the specified Squorum address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde Squorum adres</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -594,16 +594,16 @@
         <translation>Tabblad werkbalk</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Kern</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Kern</translation>
     </message>
     <message>
-        <source>Send coins to a Helium address</source>
-        <translation>Verstuur munten naar een Helium adres</translation>
+        <source>Send coins to a Squorum address</source>
+        <translation>Verstuur munten naar een Squorum adres</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and helium: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR-codes en Helium: URI's)</translation>
+        <source>Request payments (generates QR codes and squorum: URIs)</source>
+        <translation>Vraag betaling aan (genereert QR-codes en Squorum: URI's)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -614,24 +614,24 @@
         <translation>Bekijk masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Helium Core</source>
-        <translation>&amp;Over Helium Kern</translation>
+        <source>&amp;About Squorum Core</source>
+        <translation>&amp;Over Squorum Kern</translation>
     </message>
     <message>
-        <source>Show information about Helium Core</source>
-        <translation>Toon informatie over Helium Kern</translation>
+        <source>Show information about Squorum Core</source>
+        <translation>Toon informatie over Squorum Kern</translation>
     </message>
     <message>
-        <source>Modify configuration options for Helium</source>
-        <translation>Wijzig Helium configuratie opties</translation>
+        <source>Modify configuration options for Squorum</source>
+        <translation>Wijzig Squorum configuratie opties</translation>
     </message>
     <message>
-        <source>Sign messages with your Helium addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw Helium adressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your Squorum addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw Squorum adressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Helium addresses</source>
-        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde Helium adressen</translation>
+        <source>Verify messages to ensure they were signed with specified Squorum addresses</source>
+        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde Squorum adressen</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -662,8 +662,8 @@
         <translation>Open Masternode configuratiebestand</translation>
     </message>
     <message>
-        <source>Open a Helium: URI or payment request</source>
-        <translation>Open een Helium: URI of betaalverzoek</translation>
+        <source>Open a Squorum: URI or payment request</source>
+        <translation>Open een Squorum: URI of betaalverzoek</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -674,12 +674,12 @@
         <translation>Block verkenner venster</translation>
     </message>
     <message>
-        <source>Helium Core client</source>
-        <translation>Helium Core client</translation>
+        <source>Squorum Core client</source>
+        <translation>Squorum Core client</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Helium network</source>
-        <translation><numerusform>%n actieve verbinding(en) naar het Helium netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het Helium netwerk</numerusform></translation>
+        <source>%n active connection(s) to Squorum network</source>
+        <translation><numerusform>%n actieve verbinding(en) naar het Squorum netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het Squorum netwerk</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -825,8 +825,8 @@ MultiSend: %1</translation>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (helium.conf).</source>
-        <translation>Niet alle transacties worden getoond. Om alle transacties te bekijken moet u txindex=1 instellen in het configuratie bestand (helium.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (squorum.conf).</source>
+        <translation>Niet alle transacties worden getoond. Om alle transacties te bekijken moet u txindex=1 instellen in het configuratie bestand (squorum.conf).</translation>
     </message>
 </context>
 <context>
@@ -1042,8 +1042,8 @@ MultiSend: %1</translation>
         <translation>Wijzig verzendadres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Helium address.</source>
-        <translation>Het ingevoerde adres: "%1" is geen geldig Helium adres.</translation>
+        <source>The entered address "%1" is not a valid Squorum address.</source>
+        <translation>Het ingevoerde adres: "%1" is geen geldig Squorum adres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1072,16 +1072,16 @@ MultiSend: %1</translation>
         <translation>versie</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Kern</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Kern</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Helium Core</source>
-        <translation>Over Helium Core</translation>
+        <source>About Squorum Core</source>
+        <translation>Over Squorum Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1111,16 +1111,16 @@ MultiSend: %1</translation>
         <translation>Welkom</translation>
     </message>
     <message>
-        <source>Welcome to Helium Core.</source>
-        <translation>Welkom bij Helium Core</translation>
+        <source>Welcome to Squorum Core.</source>
+        <translation>Welkom bij Squorum Core</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
         <translation>Gebruik de standaard datafolder </translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Kern</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Kern</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1336,20 +1336,20 @@ MultiSend: %1</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start Helium after logging in to the system.</source>
-        <translation>Helium automatisch opstarten na inloggen op het systeem.</translation>
+        <source>Automatically start Squorum after logging in to the system.</source>
+        <translation>Squorum automatisch opstarten na inloggen op het systeem.</translation>
     </message>
     <message>
-        <source>&amp;Start Helium on system login</source>
-        <translation>&amp;Helium starten bij systeemlogin</translation>
+        <source>&amp;Start Squorum on system login</source>
+        <translation>&amp;Squorum starten bij systeemlogin</translation>
     </message>
     <message>
         <source>&amp;Network</source>
         <translation>&amp;Netwerk</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Helium.</source>
-        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van Helium.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Squorum.</source>
+        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van Squorum.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1500,16 +1500,16 @@ MultiSend: %1</translation>
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>Enter an amount of Piv to convert to zHelium</source>
-        <translation>Vul de hoeveleheid in om Piv te converteren naar zHelium</translation>
+        <source>Enter an amount of Piv to convert to zSquorum</source>
+        <translation>Vul de hoeveleheid in om Piv te converteren naar zSquorum</translation>
     </message>
     <message>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <source>zHLM</source>
-        <translation>zHLM</translation>
+        <source>zSQR</source>
+        <translation>zSQR</translation>
     </message>
     <message>
         <source>Reset</source>
@@ -1619,8 +1619,8 @@ MultiSend: %1</translation>
         <translation>Hoeveelheid</translation>
     </message>
     <message>
-        <source>Enter a Helium address (e.g. %1)</source>
-        <translation>Voer een Helium adres in (b.v. %1)</translation>
+        <source>Enter a Squorum address (e.g. %1)</source>
+        <translation>Voer een Squorum adres in (b.v. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1821,8 +1821,8 @@ MultiSend: %1</translation>
         <translation>Uit:</translation>
     </message>
     <message>
-        <source>Welcome to the Helium RPC console.</source>
-        <translation>Welkom bij de Helium RPC console.</translation>
+        <source>Welcome to the Squorum RPC console.</source>
+        <translation>Welkom bij de Squorum RPC console.</translation>
     </message>
     <message>
         <source>%1 B</source>
@@ -2029,8 +2029,8 @@ MultiSend: %1</translation>
         <translation>Wijzig:</translation>
     </message>
     <message>
-        <source>0 HLM</source>
-        <translation>0 HLM</translation>
+        <source>0 SQR</source>
+        <translation>0 SQR</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2121,8 +2121,8 @@ MultiSend: %1</translation>
         <translation>anonieme financiën</translation>
     </message>
     <message>
-        <source>Warning: Invalid Helium address</source>
-        <translation>Waarschuwing: Ongeldig Helium adres</translation>
+        <source>Warning: Invalid Squorum address</source>
+        <translation>Waarschuwing: Ongeldig Squorum adres</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -2176,8 +2176,8 @@ MultiSend: %1</translation>
         <translation>Betaal &amp;Naar:</translation>
     </message>
     <message>
-        <source>The Helium address to send the payment to</source>
-        <translation>Het Helium adres om de betaling naar te verzenden</translation>
+        <source>The Squorum address to send the payment to</source>
+        <translation>Het Squorum adres om de betaling naar te verzenden</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2231,8 +2231,8 @@ MultiSend: %1</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Helium Core is shutting down...</source>
-        <translation>Helium Core is aan het afsluiten...</translation>
+        <source>Squorum Core is shutting down...</source>
+        <translation>Squorum Core is aan het afsluiten...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2250,8 +2250,8 @@ MultiSend: %1</translation>
         <translation>&amp;Onderteken Bericht</translation>
     </message>
     <message>
-        <source>The Helium address to sign the message with</source>
-        <translation>Het Helium adres om het bericht met te ondertekenen</translation>
+        <source>The Squorum address to sign the message with</source>
+        <translation>Het Squorum adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2282,16 +2282,16 @@ MultiSend: %1</translation>
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Helium address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het Helium adres bezit</translation>
+        <source>Sign the message to prove you own this Squorum address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het Squorum adres bezit</translation>
     </message>
     <message>
-        <source>The Helium address the message was signed with</source>
-        <translation>Het Helium adres waarmee het bericht was ondertekend</translation>
+        <source>The Squorum address the message was signed with</source>
+        <translation>Het Squorum adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Helium address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde Helium adres</translation>
+        <source>Verify the message to ensure it was signed with the specified Squorum address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde Squorum adres</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2361,8 +2361,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Kern</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Kern</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2377,8 +2377,8 @@ MultiSend: %1</translation>
         <translation>De Dash Core ontwikkelaars</translation>
     </message>
     <message>
-        <source>The Helium Core developers</source>
-        <translation>De Helium Core ontwikkelaars</translation>
+        <source>The Squorum Core developers</source>
+        <translation>De Squorum Core ontwikkelaars</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2737,10 +2737,10 @@ MultiSend: %1</translation>
     </message>
 </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>ZSquorumControlDialog</name>
     <message>
-        <source>Select zHelium to Spend</source>
-        <translation>Selecteer zHelium om te spenderen</translation>
+        <source>Select zSquorum to Spend</source>
+        <translation>Selecteer zSquorum om te spenderen</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -2751,8 +2751,8 @@ MultiSend: %1</translation>
         <translation>0</translation>
     </message>
     <message>
-        <source>zHelium</source>
-        <translation>zHelium</translation>
+        <source>zSquorum</source>
+        <translation>zSquorum</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>
@@ -2764,7 +2764,7 @@ MultiSend: %1</translation>
     </message>
 </context>
 <context>
-    <name>helium-core</name>
+    <name>squorum-core</name>
     <message>
         <source>(default: %s)</source>
         <translation>(standaard: %s)</translation>
@@ -2802,8 +2802,8 @@ MultiSend: %1</translation>
         <translation>Copyright (C) 2014-%i The Dash Core Ontwikkelaars</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The Helium Core Developers</source>
-        <translation>Copyright (C) 2015-%i The Helium Core Ontwikkelaars</translation>
+        <source>Copyright (C) 2015-%i The Squorum Core Developers</source>
+        <translation>Copyright (C) 2015-%i The Squorum Core Ontwikkelaars</translation>
     </message>
     <message>
         <source>Debugging/Testing options:</source>

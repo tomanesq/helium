@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The Helium developers
+// Copyright (c) 2018 The Squorum developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -53,7 +53,7 @@ using namespace std;
 using namespace libzerocoin;
 
 #if defined(NDEBUG)
-#error "Helium cannot be compiled without assertions."
+#error "Squorum cannot be compiled without assertions."
 #endif
 
 /**
@@ -954,13 +954,13 @@ bool ContextualCheckZerocoinSpend(const CTransaction& tx, const CoinSpend& spend
     //Check to see if the zPIV is properly signed
     if (pindex->nHeight >= Params().Zerocoin_Block_V2_Start()) {
         if (!spend.HasValidSignature())
-            return error("%s: V2 zHLM spend does not have a valid signature", __func__);
+            return error("%s: V2 zSQR spend does not have a valid signature", __func__);
 
         libzerocoin::SpendType expectedType = libzerocoin::SpendType::SPEND;
         if (tx.IsCoinStake())
             expectedType = libzerocoin::SpendType::STAKE;
         if (spend.getSpendType() != expectedType) {
-            return error("%s: trying to spend zHLM without the correct spend type. txid=%s", __func__,
+            return error("%s: trying to spend zSQR without the correct spend type. txid=%s", __func__,
                          tx.GetHash().GetHex());
         }
     }
@@ -968,15 +968,15 @@ bool ContextualCheckZerocoinSpend(const CTransaction& tx, const CoinSpend& spend
     //Reject serial's that are already in the blockchain
     int nHeightTx = 0;
     if (IsSerialInBlockchain(spend.getCoinSerialNumber(), nHeightTx))
-        return error("%s : zHLM spend with serial %s is already in block %d\n", __func__,
+        return error("%s : zSQR spend with serial %s is already in block %d\n", __func__,
                      spend.getCoinSerialNumber().GetHex(), nHeightTx);
 
-    /* NOTE: GJH Inappropriate for Helium
+    /* NOTE: GJH Inappropriate for Squorum
     //Reject serial's that are not in the acceptable value range
     bool fUseV1Params = spend.getVersion() < libzerocoin::PrivateCoin::PUBKEY_VERSION;
     if (pindex->nHeight > Params().Zerocoin_Block_EnforceSerialRange() &&
         !spend.HasValidSerial(Params().Zerocoin_Params(fUseV1Params)))
-        return error("%s : zHLM spend with serial %s from tx %s is not in valid range\n", __func__,
+        return error("%s : zSQR spend with serial %s from tx %s is not in valid range\n", __func__,
                      spend.getCoinSerialNumber().GetHex(), tx.GetHash().GetHex());
     */
 
@@ -1286,7 +1286,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
             //Check that txid is not already in the chain
             int nHeightTx = 0;
             if (IsTransactionInChain(tx.GetHash(), nHeightTx))
-                return state.Invalid(error("AcceptToMemoryPool : zHLM spend tx %s already in block %d",
+                return state.Invalid(error("AcceptToMemoryPool : zSQR spend tx %s already in block %d",
                                            tx.GetHash().GetHex(), nHeightTx), REJECT_DUPLICATE, "bad-txns-inputs-spent");
 
             //Check for double spending of serial #'s
@@ -1317,7 +1317,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
                     return false;
                 }
 
-                /* NOTE: GJH inappropriate for Helium
+                /* NOTE: GJH inappropriate for Squorum
                 //Check for invalid/fraudulent inputs
                 if (!ValidOutPoint(txin.prevout, chainActive.Height())) {
                     return state.Invalid(error("%s : tried to spend invalid input %s in tx %s", __func__, txin.prevout.ToString(),
@@ -1541,7 +1541,7 @@ bool AcceptableInputs(CTxMemPool& pool, CValidationState& state, const CTransact
                     return false;
                 }
 
-                /* NOTE: GJH inappropriate for Helium
+                /* NOTE: GJH inappropriate for Squorum
                 // check for invalid/fraudulent inputs
                 if (!ValidOutPoint(txin.prevout, chainActive.Height())) {
                     return state.Invalid(error("%s : tried to spend invalid input %s in tx %s", __func__, txin.prevout.ToString(),
@@ -1881,7 +1881,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         // 50/50 split of staking reward and masternode reward
         ret = blockValue / 2;
     //} else {
-    //    //When zPIV is staked, masternode only gets 2 HLM
+    //    //When zPIV is staked, masternode only gets 2 SQR
     //    ret = 3 * COIN;
     //    if (isZPIVStake)
     //        ret = 2 * COIN;
@@ -2058,7 +2058,7 @@ bool CScriptCheck::operator()()
     return true;
 }
 
-/* NOTE: GJH inappropriate for Helium
+/* NOTE: GJH inappropriate for Squorum
 CBitcoinAddress addressExp1("DQZzqnSR6PXxagep1byLiRg9ZurCZ5KieQ");
 CBitcoinAddress addressExp2("DTQYdnNqKuEHXyNeeYhPQGGGdqHbXYwjpj");
 
@@ -2110,7 +2110,7 @@ void AddInvalidSpendsToMap(const CBlock& block)
 }
 */
 
-/* NOTE: GJH inappropriate for Helium
+/* NOTE: GJH inappropriate for Squorum
 bool ValidOutPoint(const COutPoint out, int nHeight)
 {
     bool isInvalid = nHeight >= Params().Block_Enforce_Invalid() && invalid_out::ContainsOutPoint(out);
@@ -2404,7 +2404,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("helium-scriptch");
+    RenameThread("squorum-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -2523,7 +2523,7 @@ bool RecalculatePIVSupply(int nHeightStart)
         if (pindex->nHeight == Params().Zerocoin_Block_RecalculateAccumulators()) {
             LogPrintf("%s : Original money supply=%s\n", __func__, FormatMoney(pindex->nMoneySupply));
 
-            /* NOTE: GJH Inappropriate for Helium
+            /* NOTE: GJH Inappropriate for Squorum
             pindex->nMoneySupply += Params().InvalidAmountFiltered();
             LogPrintf("%s : Adding filtered funds to supply + %s : supply=%s\n", __func__, FormatMoney(Params().InvalidAmountFiltered()), FormatMoney(pindex->nMoneySupply));
             */
@@ -2785,7 +2785,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                 return state.DoS(100, error("ConnectBlock() : inputs missing/spent"),
                     REJECT_INVALID, "bad-txns-inputs-missingorspent");
 
-            /* NOTE: GJH inappropriate for Helium
+            /* NOTE: GJH inappropriate for Squorum
             // Check that the inputs are not marked as invalid/fraudulent
             for (CTxIn in : tx.vin) {
                 if (!ValidOutPoint(in.prevout, pindex->nHeight)) {
@@ -2850,7 +2850,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     //Track zPIV money supply in the block index
     if (!UpdateZPIVSupply(block, pindex))
-        return state.DoS(100, error("%s: Failed to calculate new zHLM supply for block=%s height=%d", __func__,
+        return state.DoS(100, error("%s: Failed to calculate new zSQR supply for block=%s height=%d", __func__,
                                     block.GetHash().GetHex(), pindex->nHeight), REJECT_INVALID);
 
     // track money supply and mint amount info
@@ -2858,7 +2858,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     pindex->nMoneySupply = nMoneySupplyPrev + nValueOut - nValueIn;
     pindex->nMint = pindex->nMoneySupply - nMoneySupplyPrev + nFees;
 
-//    LogPrint("debug", "XX69----------> ConnectBlock(): nValueOut: %s, nValueIn: %s, nFees: %s, nMint: %s zHLMSpent: %s\n",
+//    LogPrint("debug", "XX69----------> ConnectBlock(): nValueOut: %s, nValueIn: %s, nFees: %s, nMint: %s zSQRSpent: %s\n",
 //              FormatMoney(nValueOut), FormatMoney(nValueIn),
 //              FormatMoney(nFees), FormatMoney(pindex->nMint), FormatMoney(nAmountZerocoinSpent));
 
@@ -2976,7 +2976,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     nTimeCallbacks += nTime4 - nTime3;
     LogPrint("bench", "    - Callbacks: %.2fms [%.2fs]\n", 0.001 * (nTime4 - nTime3), nTimeCallbacks * 0.000001);
 
-    /* NOTE: GJH Inappropriate for Helium
+    /* NOTE: GJH Inappropriate for Squorum
     //Continue tracking possible movement of fraudulent funds until they are completely frozen
     if (pindex->nHeight >= Params().Zerocoin_Block_FirstFraudulent() && pindex->nHeight <= Params().Zerocoin_Block_RecalculateAccumulators() + 1)
         AddInvalidSpendsToMap(block);
@@ -3942,7 +3942,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 if (txIn.scriptSig.IsZerocoinSpend()) {
                     libzerocoin::CoinSpend spend = TxInToZerocoinSpend(txIn);
                     if (count(vBlockSerials.begin(), vBlockSerials.end(), spend.getCoinSerialNumber()))
-                        return state.DoS(100, error("%s : Double spending of zHLM serial %s in block\n Block: %s",
+                        return state.DoS(100, error("%s : Double spending of zSQR serial %s in block\n Block: %s",
                                                     __func__, spend.getCoinSerialNumber().GetHex(), block.ToString()));
                     vBlockSerials.emplace_back(spend.getCoinSerialNumber());
                 }
@@ -4150,15 +4150,15 @@ bool AcceptBlockHeader(const CBlock& block, CValidationState& state, CBlockIndex
 bool ContextualCheckZerocoinStake(int nHeight, CStakeInput* stake)
 {
     if (nHeight < Params().Zerocoin_Block_V2_Start())
-        return error("%s: zHLM stake block is less than allowed start height", __func__);
+        return error("%s: zSQR stake block is less than allowed start height", __func__);
 
     if (CZPivStake* zPIV = dynamic_cast<CZPivStake*>(stake)) {
         CBlockIndex* pindexFrom = zPIV->GetIndexFrom();
         if (!pindexFrom)
-            return error("%s: failed to get index associated with zHLM stake checksum", __func__);
+            return error("%s: failed to get index associated with zSQR stake checksum", __func__);
 
         if (chainActive.Height() - pindexFrom->nHeight < Params().Zerocoin_RequiredStakeDepth())
-            return error("%s: zHLM stake does not have required confirmation depth", __func__);
+            return error("%s: zSQR stake does not have required confirmation depth", __func__);
 
         //The checksum needs to be the exact checksum from 200 blocks ago
         uint256 nCheckpoint200 = chainActive[nHeight - Params().Zerocoin_RequiredStakeDepth()]->nAccumulatorCheckpoint;
@@ -4215,7 +4215,7 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
             return error("%s: null stake ptr", __func__);
 
         if (stake->IsZPIV() && !ContextualCheckZerocoinStake(pindexPrev->nHeight, stake.get()))
-            return state.DoS(100, error("%s: staked zHLM fails context checks", __func__));
+            return state.DoS(100, error("%s: staked zSQR fails context checks", __func__));
 
         uint256 hash = block.GetHash();
         if(!mapProofOfStake.count(hash)) // add to mapProofOfStake
@@ -4343,7 +4343,7 @@ bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDis
         }
     }
     if (nMints || nSpends)
-        LogPrintf("%s : block contains %d zHLM mints and %d zHLM spends\n", __func__, nMints, nSpends);
+        LogPrintf("%s : block contains %d zSQR mints and %d zSQR spends\n", __func__, nMints, nSpends);
 
     if (!CheckBlockSignature(*pblock))
         return error("ProcessNewBlock() : bad proof-of-stake block signature");
@@ -5414,10 +5414,10 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         }
 
 	// Banned versions moving forward - Chain switch at 0.14.7
-	if (pfrom->cleanSubVer == "/Helium Core:0.14.3/" ||
-            pfrom->cleanSubVer == "/Helium Core:0.14.4/" ||
-            pfrom->cleanSubVer == "/Helium Core:0.14.5/" ||
-            pfrom->cleanSubVer == "/Helium Core:0.14.6/") {
+	if (pfrom->cleanSubVer == "/Squorum Core:0.14.3/" ||
+            pfrom->cleanSubVer == "/Squorum Core:0.14.4/" ||
+            pfrom->cleanSubVer == "/Squorum Core:0.14.5/" ||
+            pfrom->cleanSubVer == "/Squorum Core:0.14.6/") {
             LOCK(cs_main);
             Misbehaving(pfrom->GetId(), 100); // instantly ban them because they have bad block data
             return false;

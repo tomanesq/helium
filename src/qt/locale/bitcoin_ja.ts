@@ -1,4 +1,4 @@
-<TS language="ja" version="2.1">
+﻿<TS language="ja" version="2.1">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -269,9 +269,9 @@
     </message>
     </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>ZSquorumControlDialog</name>
     </context>
 <context>
-    <name>helium-core</name>
+    <name>squorum-core</name>
     </context>
 </TS>

@@ -164,8 +164,8 @@
         <translation>Estàs segur que vols encriptar el moneder?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HLM&lt;/b&gt;!</source>
-        <translation>Avís: Si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES HLMS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SQR&lt;/b&gt;!</source>
+        <translation>Avís: Si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES SQRS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -354,12 +354,12 @@
         <translation>A&amp;juda</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Core</translation>
     </message>
     <message>
-        <source>&amp;About Helium Core</source>
-        <translation>&amp;Sobre Helium Core</translation>
+        <source>&amp;About Squorum Core</source>
+        <translation>&amp;Sobre Squorum Core</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -552,12 +552,12 @@
         <translation>versió</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Core</translation>
     </message>
     <message>
-        <source>About Helium Core</source>
-        <translation>Sobre Helium Core</translation>
+        <source>About Squorum Core</source>
+        <translation>Sobre Squorum Core</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -575,12 +575,12 @@
         <translation>Benvingut</translation>
     </message>
     <message>
-        <source>Welcome to Helium Core.</source>
-        <translation>Benvingut a Helium Core.</translation>
+        <source>Welcome to Squorum Core.</source>
+        <translation>Benvingut a Squorum Core.</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1147,8 +1147,8 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -1307,10 +1307,10 @@
     </message>
     </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>ZSquorumControlDialog</name>
     </context>
 <context>
-    <name>helium-core</name>
+    <name>squorum-core</name>
     <message>
         <source>Error</source>
         <translation>Error</translation>

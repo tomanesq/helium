@@ -46,7 +46,7 @@ def setup():
 def build():
     global args, workdir
 
-    os.makedirs('helium-binaries/' + args.version, exist_ok=True)
+    os.makedirs('squorum-binaries/' + args.version, exist_ok=True)
     print('\nBuilding Dependencies\n')
     os.chdir('gitian-builder')
     os.makedirs('inputs', exist_ok=True)
@@ -55,27 +55,27 @@ def build():
     subprocess.check_call(['wget', '-N', '-P', 'inputs', 'https://bitcoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch'])
     subprocess.check_call(["echo 'a8c4e9cafba922f89de0df1f2152e7be286aba73f78505169bc351a7938dd911 inputs/osslsigncode-Backports-to-1.7.1.patch' | sha256sum -c"], shell=True)
     subprocess.check_call(["echo 'f9a8cdb38b9c309326764ebc937cba1523a3a751a7ab05df3ecc99d18ae466c9 inputs/osslsigncode-1.7.1.tar.gz' | sha256sum -c"], shell=True)
-    subprocess.check_call(['make', '-C', '../helium/depends', 'download', 'SOURCES_PATH=' + os.getcwd() + '/cache/common'])
+    subprocess.check_call(['make', '-C', '../squorum/depends', 'download', 'SOURCES_PATH=' + os.getcwd() + '/cache/common'])
 
     if args.linux:
         print('\nCompiling ' + args.version + ' Linux')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'helium='+args.commit, '--url', 'helium='+args.url, '../helium/contrib/gitian-descriptors/gitian-linux.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs/', '../helium/contrib/gitian-descriptors/gitian-linux.yml'])
-        subprocess.check_call('mv build/out/helium-*.tar.gz build/out/src/helium-*.tar.gz ../helium-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'squorum='+args.commit, '--url', 'squorum='+args.url, '../squorum/contrib/gitian-descriptors/gitian-linux.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs/', '../squorum/contrib/gitian-descriptors/gitian-linux.yml'])
+        subprocess.check_call('mv build/out/squorum-*.tar.gz build/out/src/squorum-*.tar.gz ../squorum-binaries/'+args.version, shell=True)
 
     if args.windows:
         print('\nCompiling ' + args.version + ' Windows')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'helium='+args.commit, '--url', 'helium='+args.url, '../helium/contrib/gitian-descriptors/gitian-win.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs/', '../helium/contrib/gitian-descriptors/gitian-win.yml'])
-        subprocess.check_call('mv build/out/helium-*-win-unsigned.tar.gz inputs/', shell=True)
-        subprocess.check_call('mv build/out/helium-*.zip build/out/helium-*.exe ../helium-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'squorum='+args.commit, '--url', 'squorum='+args.url, '../squorum/contrib/gitian-descriptors/gitian-win.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs/', '../squorum/contrib/gitian-descriptors/gitian-win.yml'])
+        subprocess.check_call('mv build/out/squorum-*-win-unsigned.tar.gz inputs/', shell=True)
+        subprocess.check_call('mv build/out/squorum-*.zip build/out/squorum-*.exe ../squorum-binaries/'+args.version, shell=True)
 
     if args.macos:
         print('\nCompiling ' + args.version + ' MacOS')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'helium='+args.commit, '--url', 'helium='+args.url, '../helium/contrib/gitian-descriptors/gitian-osx.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs/', '../helium/contrib/gitian-descriptors/gitian-osx.yml'])
-        subprocess.check_call('mv build/out/helium-*-osx-unsigned.tar.gz inputs/', shell=True)
-        subprocess.check_call('mv build/out/helium-*.tar.gz build/out/helium-*.dmg ../helium-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'squorum='+args.commit, '--url', 'squorum='+args.url, '../squorum/contrib/gitian-descriptors/gitian-osx.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs/', '../squorum/contrib/gitian-descriptors/gitian-osx.yml'])
+        subprocess.check_call('mv build/out/squorum-*-osx-unsigned.tar.gz inputs/', shell=True)
+        subprocess.check_call('mv build/out/squorum-*.tar.gz build/out/squorum-*.dmg ../squorum-binaries/'+args.version, shell=True)
 
     os.chdir(workdir)
 
@@ -95,17 +95,17 @@ def sign():
     if args.windows:
         print('\nSigning ' + args.version + ' Windows')
         subprocess.check_call('cp inputs/bitcoin-' + args.version + '-win-unsigned.tar.gz inputs/bitcoin-win-unsigned.tar.gz', shell=True)
-        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../helium/contrib/gitian-descriptors/gitian-win-signer.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-signed', '--destination', '../gitian.sigs/', '../helium/contrib/gitian-descriptors/gitian-win-signer.yml'])
-        subprocess.check_call('mv build/out/helium-*win64-setup.exe ../helium-binaries/'+args.version, shell=True)
-        subprocess.check_call('mv build/out/helium-*win32-setup.exe ../helium-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../squorum/contrib/gitian-descriptors/gitian-win-signer.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-signed', '--destination', '../gitian.sigs/', '../squorum/contrib/gitian-descriptors/gitian-win-signer.yml'])
+        subprocess.check_call('mv build/out/squorum-*win64-setup.exe ../squorum-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/squorum-*win32-setup.exe ../squorum-binaries/'+args.version, shell=True)
 
     if args.macos:
         print('\nSigning ' + args.version + ' MacOS')
         subprocess.check_call('cp inputs/bitcoin-' + args.version + '-osx-unsigned.tar.gz inputs/bitcoin-osx-unsigned.tar.gz', shell=True)
-        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../helium/contrib/gitian-descriptors/gitian-osx-signer.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-signed', '--destination', '../gitian.sigs/', '../helium/contrib/gitian-descriptors/gitian-osx-signer.yml'])
-        subprocess.check_call('mv build/out/helium-osx-signed.dmg ../helium-binaries/'+args.version+'/bitcoin-'+args.version+'-osx.dmg', shell=True)
+        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../squorum/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-signed', '--destination', '../gitian.sigs/', '../squorum/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+        subprocess.check_call('mv build/out/squorum-osx-signed.dmg ../squorum-binaries/'+args.version+'/bitcoin-'+args.version+'-osx.dmg', shell=True)
 
     os.chdir(workdir)
 
@@ -122,15 +122,15 @@ def verify():
     os.chdir('gitian-builder')
 
     print('\nVerifying v'+args.version+' Linux\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-linux', '../helium/contrib/gitian-descriptors/gitian-linux.yml'])
+    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-linux', '../squorum/contrib/gitian-descriptors/gitian-linux.yml'])
     print('\nVerifying v'+args.version+' Windows\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-unsigned', '../helium/contrib/gitian-descriptors/gitian-win.yml'])
+    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-unsigned', '../squorum/contrib/gitian-descriptors/gitian-win.yml'])
     print('\nVerifying v'+args.version+' MacOS\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-unsigned', '../helium/contrib/gitian-descriptors/gitian-osx.yml'])
+    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-unsigned', '../squorum/contrib/gitian-descriptors/gitian-osx.yml'])
     print('\nVerifying v'+args.version+' Signed Windows\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-signed', '../helium/contrib/gitian-descriptors/gitian-win-signer.yml'])
+    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-signed', '../squorum/contrib/gitian-descriptors/gitian-win-signer.yml'])
     print('\nVerifying v'+args.version+' Signed MacOS\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-signed', '../helium/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-signed', '../squorum/contrib/gitian-descriptors/gitian-osx-signer.yml'])
 
     os.chdir(workdir)
 
@@ -208,7 +208,7 @@ def main():
     if args.setup:
         setup()
 
-    os.chdir('helium')
+    os.chdir('squorum')
     if args.pull:
         subprocess.check_call(['git', 'fetch', args.url, 'refs/pull/'+args.version+'/merge'])
         os.chdir('../gitian-builder/inputs/bitcoin')

@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Wählen Sie die Adresse aus, an die Sie Helium überweisen möchten</translation>
+        <translation>Wählen Sie die Adresse aus, an die Sie Squorum überweisen möchten</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Wählen Sie die Adresse aus, über die Sie Helium empfangen wollen</translation>
+        <translation>Wählen Sie die Adresse aus, über die Sie Squorum empfangen wollen</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -62,12 +62,12 @@
         <translation>Empfangsadressen</translation>
     </message>
     <message>
-        <source>These are your Helium addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dies sind ihre Helium-Adressen zum Tätigen von Überweisungen. Bitte prüfen Sie den Betrag und die Empfangsadresse, bevor Sie Helium überweisen.</translation>
+        <source>These are your Squorum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dies sind ihre Squorum-Adressen zum Tätigen von Überweisungen. Bitte prüfen Sie den Betrag und die Empfangsadresse, bevor Sie Squorum überweisen.</translation>
     </message>
     <message>
-        <source>These are your Helium addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dies sind ihre Helium-Adressen zum Empfangen von Zahlungen. Es wird empfohlen für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
+        <source>These are your Squorum addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dies sind ihre Squorum-Adressen zum Empfangen von Zahlungen. Es wird empfohlen für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Wallet-Verschlüsselung bestätigen</translation>
     </message>
     <message>
-        <source>Helium will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your HLMs from being stolen by malware infecting your computer.</source>
-        <translation>Die Anwendungs wird nun geschlossen um die Verschlüsselung abzuschließen. Bitte beachten Sie, dass auch Verschlüsselung nicht nicht vollständig vor Diebstahl ihrer HLMs durch Schadsoftware schützt, die ihren Computer befällt.</translation>
+        <source>Squorum will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your SQRs from being stolen by malware infecting your computer.</source>
+        <translation>Die Anwendungs wird nun geschlossen um die Verschlüsselung abzuschließen. Bitte beachten Sie, dass auch Verschlüsselung nicht nicht vollständig vor Diebstahl ihrer SQRs durch Schadsoftware schützt, die ihren Computer befällt.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Sind Sie sich sicher, dass Sie ihre Wallet verschlüsseln möchten?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HLM&lt;/b&gt;!</source>
-        <translation>Warnung: Wenn Sie ihre Wallet verschlüsseln und Ihre Passphrase verlieren werden Sie &lt;b&gt;alle ihre HLMs verlieren&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SQR&lt;/b&gt;!</source>
+        <translation>Warnung: Wenn Sie ihre Wallet verschlüsseln und Ihre Passphrase verlieren werden Sie &lt;b&gt;alle ihre SQRs verlieren&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Verschlüsselung</translation>
     </message>
     <message>
-        <source>Enter a Helium Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Gib eine Helium Adresse ein welche mit BIP 38 verschlüsselt werden soll. Gib ein Passwort in die mittleren Box ein. Drücke auf verschlüsseln, um den privaten schlüssel zu errechenen.</translation>
+        <source>Enter a Squorum Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Gib eine Squorum Adresse ein welche mit BIP 38 verschlüsselt werden soll. Gib ein Passwort in die mittleren Box ein. Drücke auf verschlüsseln, um den privaten schlüssel zu errechenen.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresse:</translation>
     </message>
     <message>
-        <source>The Helium address to sign the message with</source>
-        <translation>Helium Adresse mit welcher die Nachricht signiert werden soll</translation>
+        <source>The Squorum address to sign the message with</source>
+        <translation>Squorum Adresse mit welcher die Nachricht signiert werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Kopiert die aktuelle Signatur in den Zwischenspeicher</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Helium address</source>
-        <translation>Signiere die Nachricht um zu Beweisen, dass du diese Helium Adresse besitzt</translation>
+        <source>Sign the message to prove you own this Squorum address</source>
+        <translation>Signiere die Nachricht um zu Beweisen, dass du diese Squorum Adresse besitzt</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Geben Sie den BIP 38 verschlüsselten privaten Schlüssel ein. Geben Sie die Passphrase im mittleren Feld ein. Klicken Sie auf Entschlüsselung, um den privaten Schlüssel zu berechnen. Nachdem der Schlüssel entschlüsselt wurde, klicken Sie auf 'Adresse importieren', fügen Sie diesen privaten Schlüssel der Wallet hinzu.</translation>
     </message>
     <message>
-        <source>The Helium address the message was signed with</source>
-        <translation>Die Helium Adresse mit welcher die Nachricht signiert wurde.</translation>
+        <source>The Squorum address the message was signed with</source>
+        <translation>Die Squorum Adresse mit welcher die Nachricht signiert wurde.</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Helium address</source>
-        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen Helium-Adresse signiert wurde.</translation>
+        <source>Verify the message to ensure it was signed with the specified Squorum address</source>
+        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen Squorum-Adresse signiert wurde.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -602,24 +602,24 @@
         <translation>Registerkartenleiste</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Core</translation>
     </message>
     <message>
-        <source>Send coins to a Helium address</source>
-        <translation>An eine Helium-Adresse überweisen</translation>
+        <source>Send coins to a Squorum address</source>
+        <translation>An eine Squorum-Adresse überweisen</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and helium: URIs)</source>
-        <translation>Zahlung anfordern (QR-Code Generierung und helium: URIs)</translation>
+        <source>Request payments (generates QR codes and squorum: URIs)</source>
+        <translation>Zahlung anfordern (QR-Code Generierung und squorum: URIs)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
         <translation>&amp;Privatsphäre</translation>
     </message>
     <message>
-        <source>Privacy Action for zHLM and Obfuscation</source>
-        <translation>Privatsphäre Aktion für zHLM und Verschleierung</translation>
+        <source>Privacy Action for zSQR and Obfuscation</source>
+        <translation>Privatsphäre Aktion für zSQR und Verschleierung</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -630,24 +630,24 @@
         <translation>Masternodes durchsuchen</translation>
     </message>
     <message>
-        <source>&amp;About Helium Core</source>
-        <translation>Über.Helium Core</translation>
+        <source>&amp;About Squorum Core</source>
+        <translation>Über.Squorum Core</translation>
     </message>
     <message>
-        <source>Show information about Helium Core</source>
-        <translation>Zeigt Informationen über Helium Core</translation>
+        <source>Show information about Squorum Core</source>
+        <translation>Zeigt Informationen über Squorum Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Helium</source>
-        <translation>Konfiguration von Helium verändern</translation>
+        <source>Modify configuration options for Squorum</source>
+        <translation>Konfiguration von Squorum verändern</translation>
     </message>
     <message>
-        <source>Sign messages with your Helium addresses to prove you own them</source>
-        <translation>Unterschreibt eine Nachricht mit Ihrer Helium-Adresse und beweist, dass sie Ihnen gehört</translation>
+        <source>Sign messages with your Squorum addresses to prove you own them</source>
+        <translation>Unterschreibt eine Nachricht mit Ihrer Squorum-Adresse und beweist, dass sie Ihnen gehört</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Helium addresses</source>
-        <translation>Überprüft eine Nachricht um zu prüfen ob diese mit einer bestimmten Helium-Adresse signiert wurde</translation>
+        <source>Verify messages to ensure they were signed with specified Squorum addresses</source>
+        <translation>Überprüft eine Nachricht um zu prüfen ob diese mit einer bestimmten Squorum-Adresse signiert wurde</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -674,8 +674,8 @@
         <translation>Öffne Masternode Einstellungsdatei</translation>
     </message>
     <message>
-        <source>Open a Helium: URI or payment request</source>
-        <translation>Öffne eine Helium: URI or Zahlungsanfrage</translation>
+        <source>Open a Squorum: URI or payment request</source>
+        <translation>Öffne eine Squorum: URI or Zahlungsanfrage</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -686,16 +686,16 @@
         <translation>Blockchain Betrachter Fenster</translation>
     </message>
     <message>
-        <source>Show the Helium Core help message to get a list with possible Helium command-line options</source>
-        <translation>Zeige die Helium-Core Hilfe, um mögliche Helium Kommando-Zeilen-Optionen anzuzeigen</translation>
+        <source>Show the Squorum Core help message to get a list with possible Squorum command-line options</source>
+        <translation>Zeige die Squorum-Core Hilfe, um mögliche Squorum Kommando-Zeilen-Optionen anzuzeigen</translation>
     </message>
     <message>
-        <source>Helium Core client</source>
-        <translation>Helium Core Client</translation>
+        <source>Squorum Core client</source>
+        <translation>Squorum Core Client</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Helium network</source>
-        <translation><numerusform>%n aktive Verbindung zum Helium Netzwerk</numerusform><numerusform>%n aktive Verbindungen zum Helium Netzwerk</numerusform></translation>
+        <source>%n active connection(s) to Squorum network</source>
+        <translation><numerusform>%n aktive Verbindung zum Squorum Netzwerk</numerusform><numerusform>%n aktive Verbindungen zum Squorum Netzwerk</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -848,8 +848,8 @@ Adresse: %4</translation>
         <translation>TextEtikett</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (helium.conf).</source>
-        <translation>Nicht alle Transaktionen können anzezeigt werden. Um alle Transaktionen zu sehen, müssen sie die Option  "txindex=1" in der "helium.conf" Konfigurationsdatei hinzufügen.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (squorum.conf).</source>
+        <translation>Nicht alle Transaktionen können anzezeigt werden. Um alle Transaktionen zu sehen, müssen sie die Option  "txindex=1" in der "squorum.conf" Konfigurationsdatei hinzufügen.</translation>
     </message>
 </context>
 <context>
@@ -1137,8 +1137,8 @@ Adresse: %4</translation>
         <translation>Zahlungsadresse bearbeiten</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Helium address.</source>
-        <translation>Die eingegebene Adresse "%1" ist keine gültige Helium-Adresse.</translation>
+        <source>The entered address "%1" is not a valid Squorum address.</source>
+        <translation>Die eingegebene Adresse "%1" ist keine gültige Squorum-Adresse.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1183,16 +1183,16 @@ Adresse: %4</translation>
         <translation>Version</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-Bit)</translation>
     </message>
     <message>
-        <source>About Helium Core</source>
-        <translation>Über Helium Core</translation>
+        <source>About Squorum Core</source>
+        <translation>Über Squorum Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1238,16 +1238,16 @@ Adresse: %4</translation>
         <translation>Willkommen</translation>
     </message>
     <message>
-        <source>Welcome to Helium Core.</source>
-        <translation>Willkommen zu Helium Core.</translation>
+        <source>Welcome to Squorum Core.</source>
+        <translation>Willkommen zu Squorum Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Helium Core will store its data.</source>
-        <translation>Da dies das erste Mal ist, dass Sie Helium Core starten, legen Sie jetzt bitte fest, an welchem Ort die Daten gespeichert werden sollen.</translation>
+        <source>As this is the first time the program is launched, you can choose where Squorum Core will store its data.</source>
+        <translation>Da dies das erste Mal ist, dass Sie Squorum Core starten, legen Sie jetzt bitte fest, an welchem Ort die Daten gespeichert werden sollen.</translation>
     </message>
     <message>
-        <source>Helium Core will download and store a copy of the Helium block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Helium Core wird die Blockchain laden und lokal speichern. Dafür sind mindestens %1GB freier Speicherplatz erforderlich. Der Speicherbedarf wird mit der Zeit anwachsen. Die Wallet wird ebenfalls in diesem Verzeichnis gespeichert.</translation>
+        <source>Squorum Core will download and store a copy of the Squorum block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Squorum Core wird die Blockchain laden und lokal speichern. Dafür sind mindestens %1GB freier Speicherplatz erforderlich. Der Speicherbedarf wird mit der Zeit anwachsen. Die Wallet wird ebenfalls in diesem Verzeichnis gespeichert.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1258,8 +1258,8 @@ Adresse: %4</translation>
         <translation>Ein benutzerdefiniertes Datenverzeichnis verwenden:</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1396,12 +1396,12 @@ Adresse: %4</translation>
         <translation>Zieladresse eingeben</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other Helium addresses after it matures.
-To Add: enter percentage to give and Helium address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other Squorum addresses after it matures.
+To Add: enter percentage to give and Squorum address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend ermöglicht es automatisch bis zu 100% Ihrer Stake- oder Masternode-Belohnung zu einer Liste von anderen Helium-Adressen zu senden.
-Zum hinzufügen: Gebe den Prozentsätze ein, um die Helium-Adressen des MultiSend-Vektor hinzuzufügen.
+        <translation>MultiSend ermöglicht es automatisch bis zu 100% Ihrer Stake- oder Masternode-Belohnung zu einer Liste von anderen Squorum-Adressen zu senden.
+Zum hinzufügen: Gebe den Prozentsätze ein, um die Squorum-Adressen des MultiSend-Vektor hinzuzufügen.
 Zum entfernen: Gebe die zu löschende Adresse ein und drücke löschen.
 MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translation>
     </message>
@@ -1539,48 +1539,48 @@ Bitte Adresse überprüfen und nochmals versuchen.</translation>
         <translation>Bitte den gewünschten Privatsphäre Level auswählen.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 HLM</source>
-        <translation>2 separate Masternodes verwenden um bis zu 10000 HLM zu mixen</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 SQR</source>
+        <translation>2 separate Masternodes verwenden um bis zu 10000 SQR zu mixen</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 HLM</source>
-        <translation>8 separate Masternodes verwenden um bis zu 10000 HLM zu mixen</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 SQR</source>
+        <translation>8 separate Masternodes verwenden um bis zu 10000 SQR zu mixen</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>16 separate Masternodes verwenden</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 HLM to anonymize 10000 HLM</source>
-        <translation>Diese Option ist die schnellst und kostet ungefähr ~0.025 HLM um 10000 HLM zu anonymisieren </translation>
+        <source>This option is the quickest and will cost about ~0.025 SQR to anonymize 10000 SQR</source>
+        <translation>Diese Option ist die schnellst und kostet ungefähr ~0.025 SQR um 10000 SQR zu anonymisieren </translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 HLM to anonymize 10000 HLM</source>
-        <translation>Diese Option ist angemessen schnell und kostet ungefähr  0.05 HLM um 10000 HLM zu anonymisieren</translation>
+        <source>This option is moderately fast and will cost about 0.05 SQR to anonymize 10000 SQR</source>
+        <translation>Diese Option ist angemessen schnell und kostet ungefähr  0.05 SQR um 10000 SQR zu anonymisieren</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Diese Option ist die langsamste und sicherste Option. Die Verwendung maximaler Anonymisierung kostet</translation>
     </message>
     <message>
-        <source>0.1 HLM per 10000 HLM you anonymize.</source>
-        <translation>0.1 HLM per 10000 HLM die anonymisiert werden.</translation>
+        <source>0.1 SQR per 10000 SQR you anonymize.</source>
+        <translation>0.1 SQR per 10000 SQR die anonymisiert werden.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
         <translation>Verschleierungskonfiguration</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Helium's configuration screen.</source>
-        <translation>Verschleierung erfolgreich auf normal gesetzt (%1 und 2 Runden). Sie können dies jederzeit in den Heliums Konfigurationen ändern.</translation>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Squorum's configuration screen.</source>
+        <translation>Verschleierung erfolgreich auf normal gesetzt (%1 und 2 Runden). Sie können dies jederzeit in den Squorums Konfigurationen ändern.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Helium's configuration screen.</source>
-        <translation>Verschleierung erfolgreich auf hohen gesetzt (%1 und 8 Runden). Sie können dies jederzeit in den Heliums Konfigurationen ändern.</translation>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Squorum's configuration screen.</source>
+        <translation>Verschleierung erfolgreich auf hohen gesetzt (%1 und 8 Runden). Sie können dies jederzeit in den Squorums Konfigurationen ändern.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Helium's configuration screen.</source>
-        <translation>Verschleierung erfolgreich auf maximal gesetzt (%1 und 16 Runden). Sie können dies jederzeit in den Heliums Konfigurationen ändern.</translation>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Squorum's configuration screen.</source>
+        <translation>Verschleierung erfolgreich auf maximal gesetzt (%1 und 16 Runden). Sie können dies jederzeit in den Squorums Konfigurationen ändern.</translation>
     </message>
 </context>
 <context>
@@ -1641,8 +1641,8 @@ Bitte Adresse überprüfen und nochmals versuchen.</translation>
         <translation>Wenn Sie das Ausgeben von unbestätigten Wechselgeld deaktivieren, so kann das Wechselgeld von einer Transaktion &lt;br/&gt;nicht verwendet werden, bis mindestens eine Bestätigung vorliegt.&lt;br/&gt;Dies hat auch Auswirkungen auf ihre Bilanzberechnung.</translation>
     </message>
     <message>
-        <source>Automatically open the Helium client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatisches öffnen des Helium-Client-Port im Router. Dies funktioniert nur, wenn ihr Router UPnP unterstützt und es eingeschaltet ist.</translation>
+        <source>Automatically open the Squorum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatisches öffnen des Squorum-Client-Port im Router. Dies funktioniert nur, wenn ihr Router UPnP unterstützt und es eingeschaltet ist.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1661,12 +1661,12 @@ Bitte Adresse überprüfen und nochmals versuchen.</translation>
         <translation>Experte</translation>
     </message>
     <message>
-        <source>Automatically start Helium after logging in to the system.</source>
-        <translation>Helium automatisch nach dem Login starten.</translation>
+        <source>Automatically start Squorum after logging in to the system.</source>
+        <translation>Squorum automatisch nach dem Login starten.</translation>
     </message>
     <message>
-        <source>&amp;Start Helium on system login</source>
-        <translation>Helium automatisch beim System Login &amp;starten.</translation>
+        <source>&amp;Start Squorum on system login</source>
+        <translation>Squorum automatisch beim System Login &amp;starten.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1693,38 +1693,38 @@ Bitte Adresse überprüfen und nochmals versuchen.</translation>
         <translation>&amp;Netzwerk</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Helium.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Squorum.</source>
         <translation>Die Sprache der Benutzeroberflächekann hier gesetzt werden. Diese Einstellung wird nach einem Neustart realisiert.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/helium-project/helium-project-translations</source>
+https://www.transifex.com/heliumchain/squorum-project-translations</source>
         <translation>Sprache fehlt oder ist unvollständig? Helfe mit und trage zur Übersetzung hier bei:
-https://www.transifex.com/helium-project/helium-project-translations</translation>
+https://www.transifex.com/heliumchain/squorum-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Port mit &amp;UPnP mappen</translation>
     </message>
     <message>
-        <source>Percentage of incoming HLM which get automatically converted to zHLM via Zerocoin Protocol (min: 10%)</source>
-        <translation>Anteil des einkommenden HLM, welcher automatisch zu zHLM via Zerocoin Protokoll konvertiert wird (min: 10%)</translation>
+        <source>Percentage of incoming SQR which get automatically converted to zSQR via Zerocoin Protocol (min: 10%)</source>
+        <translation>Anteil des einkommenden SQR, welcher automatisch zu zSQR via Zerocoin Protokoll konvertiert wird (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zHLM</source>
-        <translation>Prozentsatz der automatisierten zHLM</translation>
+        <source>Percentage of autominted zSQR</source>
+        <translation>Prozentsatz der automatisierten zSQR</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough HLM for this denomination is available</source>
-        <translation>Warte mit automatischer Konvertierung zu Zerocoin, bis genügend HLM für diese Stückelung verfügbar ist</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough SQR for this denomination is available</source>
+        <translation>Warte mit automatischer Konvertierung zu Zerocoin, bis genügend SQR für diese Stückelung verfügbar ist</translation>
     </message>
     <message>
-        <source>Preferred Automint zHLM Denomination</source>
-        <translation>Bevorzugte automatisierte zHLM Stückelung </translation>
+        <source>Preferred Automint zSQR Denomination</source>
+        <translation>Bevorzugte automatisierte zSQR Stückelung </translation>
     </message>
     <message>
-        <source>Connect to the Helium network through a SOCKS5 proxy.</source>
-        <translation>Durch einen SOCKS5 Proxy mit dem Helium Netzwerk verbinden.</translation>
+        <source>Connect to the Squorum network through a SOCKS5 proxy.</source>
+        <translation>Durch einen SOCKS5 Proxy mit dem Squorum Netzwerk verbinden.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1854,8 +1854,8 @@ https://www.transifex.com/helium-project/helium-project-translations</translatio
         <translation>Formular</translation>
     </message>
     <message>
-        <source>HLM Balances</source>
-        <translation>HLM Bilanzen</translation>
+        <source>SQR Balances</source>
+        <translation>SQR Bilanzen</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1882,8 +1882,8 @@ https://www.transifex.com/helium-project/helium-project-translations</translatio
         <translation>Erarbeiteter Betrag der noch nicht gereift ist</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Helium network after a connection is established, but this process has not completed yet.</source>
-        <translation>Die angezeigte Information ist möglicherweise nicht mehr aktuell. Ihre Wallet synchronisiert sich automatisch mit dem Helium-Netzwerk, nachdem eine Verbindung hergestellt wurde. Aber dieser Vorgang ist noch nicht abgeschlossen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Squorum network after a connection is established, but this process has not completed yet.</source>
+        <translation>Die angezeigte Information ist möglicherweise nicht mehr aktuell. Ihre Wallet synchronisiert sich automatisch mit dem Squorum-Netzwerk, nachdem eine Verbindung hergestellt wurde. Aber dieser Vorgang ist noch nicht abgeschlossen.</translation>
     </message>
     <message>
         <source>Unconfirmed transactions to watch-only addresses</source>
@@ -1922,12 +1922,12 @@ https://www.transifex.com/helium-project/helium-project-translations</translatio
         <translation>Kombinierte Bilanz (einschließlich unreifer Coins)</translation>
     </message>
     <message>
-        <source>HLM:</source>
-        <translation>HLM:</translation>
+        <source>SQR:</source>
+        <translation>SQR:</translation>
     </message>
     <message>
-        <source>zHLM:</source>
-        <translation>zHLM:</translation>
+        <source>zSQR:</source>
+        <translation>zSQR:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -1969,12 +1969,12 @@ https://www.transifex.com/helium-project/helium-project-translations</translatio
         <translation>Zahlungsaufforderungadresse %1</translation>
     </message>
     <message>
-        <source>Cannot start helium: click-to-pay handler</source>
-        <translation>Kann Helium nicht starten: click-to-pay Handler</translation>
+        <source>Cannot start squorum: click-to-pay handler</source>
+        <translation>Kann Squorum nicht starten: click-to-pay Handler</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Helium address or malformed URI parameters.</source>
-        <translation>URI kann nicht analysiert werden! Dies kann durch eine ungültige Helium-Adresse oder fehlerhafte URI-Parameter verursacht sein.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Squorum address or malformed URI parameters.</source>
+        <translation>URI kann nicht analysiert werden! Dies kann durch eine ungültige Squorum-Adresse oder fehlerhafte URI-Parameter verursacht sein.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2055,24 +2055,24 @@ https://www.transifex.com/helium-project/helium-project-translations</translatio
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>HLM which were anonymized via Zerocin Protocol</source>
-        <translation>HLM, die über das Zerocin-Protokoll anonymisiert wurden</translation>
+        <source>SQR which were anonymized via Zerocin Protocol</source>
+        <translation>SQR, die über das Zerocin-Protokoll anonymisiert wurden</translation>
     </message>
     <message>
-        <source>Zerocoin HLM (zHLM)</source>
-        <translation>Zerocoin HLM (zHLM)</translation>
+        <source>Zerocoin SQR (zSQR)</source>
+        <translation>Zerocoin SQR (zSQR)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
         <translation>Zerocoin Handlungen:</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Helium network after a connection is established, but this process has not completed yet.</source>
-        <translation>Die angezeigte Information ist möglicherweise nicht mehr aktuell. Ihre Wallet synchronisiert sich automatisch mit dem Helium-Netzwerk, nachdem eine Verbindung hergestellt wurde. Aber dieser Vorgang ist noch nicht abgeschlossen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Squorum network after a connection is established, but this process has not completed yet.</source>
+        <translation>Die angezeigte Information ist möglicherweise nicht mehr aktuell. Ihre Wallet synchronisiert sich automatisch mit dem Squorum-Netzwerk, nachdem eine Verbindung hergestellt wurde. Aber dieser Vorgang ist noch nicht abgeschlossen.</translation>
     </message>
     <message>
-        <source>Enter an amount of Piv to convert to zHelium</source>
-        <translation>Eingabe des Piv-Betrags, um in zHelium umzuwandeln</translation>
+        <source>Enter an amount of Piv to convert to zSquorum</source>
+        <translation>Eingabe des Piv-Betrags, um in zSquorum umzuwandeln</translation>
     </message>
     <message>
         <source>Mint Zerocoin</source>
@@ -2083,16 +2083,16 @@ https://www.transifex.com/helium-project/helium-project-translations</translatio
         <translation>0</translation>
     </message>
     <message>
-        <source>zHLM</source>
-        <translation>zHLM</translation>
+        <source>zSQR</source>
+        <translation>zSQR</translation>
     </message>
     <message>
         <source>Available for Minting:</source>
         <translation>Verfügbar für Prägung:</translation>
     </message>
     <message>
-        <source>0.000 000 00 HLM</source>
-        <translation>0.000 000 00 HLM</translation>
+        <source>0.000 000 00 SQR</source>
+        <translation>0.000 000 00 SQR</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -2127,12 +2127,12 @@ https://www.transifex.com/helium-project/helium-project-translations</translatio
         <translation>Status und/oder Mitteilungen aus der letzten Präge-Action</translation>
     </message>
     <message>
-        <source>zHelium Control</source>
-        <translation>zHelium Kontrolle</translation>
+        <source>zSquorum Control</source>
+        <translation>zSquorum Kontrolle</translation>
     </message>
     <message>
-        <source>zHelium Selected:</source>
-        <translation>zHelium Ausgewählt:</translation>
+        <source>zSquorum Selected:</source>
+        <translation>zSquorum Ausgewählt:</translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -2151,8 +2151,8 @@ https://www.transifex.com/helium-project/helium-project-translations</translatio
         <translation>Verfügbare Bilanz:</translation>
     </message>
     <message>
-        <source>0 zHLM</source>
-        <translation>0 zHLM</translation>
+        <source>0 zSQR</source>
+        <translation>0 zSQR</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2171,8 +2171,8 @@ https://www.transifex.com/helium-project/helium-project-translations</translatio
         <translation>E&amp;mpfänger:</translation>
     </message>
     <message>
-        <source>The Helium address to send the payment to. Creates local payment to yourself when empty.</source>
-        <translation>Die Helium-Adresse, an die die Zahlung gesenden wird. Erstelle Sie eine lokale Zahlung an sich selbst, wenn sie leer ist.</translation>
+        <source>The Squorum address to send the payment to. Creates local payment to yourself when empty.</source>
+        <translation>Die Squorum-Adresse, an die die Zahlung gesenden wird. Erstelle Sie eine lokale Zahlung an sich selbst, wenn sie leer ist.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2387,8 +2387,8 @@ https://www.transifex.com/helium-project/helium-project-translations</translatio
         <translation>Erfolgreich geprägt</translation>
     </message>
     <message>
-        <source> zHLM in </source>
-        <translation> zHLM in </translation>
+        <source> zSQR in </source>
+        <translation> zSQR in </translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2437,8 +2437,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Keine "Pay To"-Adresse zur Verfügung. Erstelle lokale Zahlung</translation>
     </message>
     <message>
-        <source>Invalid Helium Address</source>
-        <translation>Ungültige Helium-Adresse </translation>
+        <source>Invalid Squorum Address</source>
+        <translation>Ungültige Squorum-Adresse </translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -2481,8 +2481,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Ausgeben Zerocoin fehlgeschlagen mit Status =</translation>
     </message>
     <message>
-        <source>zHelium Spend #: </source>
-        <translation>zHLM Ausgeben #:</translation>
+        <source>zSquorum Spend #: </source>
+        <translation>zSQR Ausgeben #:</translation>
     </message>
     <message>
         <source>denomination: </source>
@@ -2505,8 +2505,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Adresse:</translation>
     </message>
     <message>
-        <source>zHelium Mint</source>
-        <translation>zHelium Prägen</translation>
+        <source>zSquorum Mint</source>
+        <translation>zSquorum Prägen</translation>
     </message>
     <message>
         <source>Sending successful, return code: </source>
@@ -2528,8 +2528,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Betrag</translation>
     </message>
     <message>
-        <source>Enter a Helium address (e.g. %1)</source>
-        <translation>Helium-Adresse eingeben (z.B. %1)</translation>
+        <source>Enter a Squorum address (e.g. %1)</source>
+        <translation>Squorum-Adresse eingeben (z.B. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2666,8 +2666,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Block chain</translation>
     </message>
     <message>
-        <source>Open the Helium debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Öffne Helium-Debug-Protokolldatei aus dem aktuellen Datenverzeichnis. Dies kann für einige Protokolldateien einige Sekunden dauern.</translation>
+        <source>Open the Squorum debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Öffne Squorum-Debug-Protokolldatei aus dem aktuellen Datenverzeichnis. Dies kann für einige Protokolldateien einige Sekunden dauern.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2834,8 +2834,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Out:</translation>
     </message>
     <message>
-        <source>Welcome to the Helium RPC console.</source>
-        <translation>Willkommen in der Helium RPC Konsole.</translation>
+        <source>Welcome to the Squorum RPC console.</source>
+        <translation>Willkommen in der Squorum RPC Konsole.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2905,12 +2905,12 @@ Bitte haben Sie Geduld...</translation>
         <translation>Ein optionales Etikett, das mit der neuen Empfangsadresse verknüpft werden soll.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Helium network.</source>
-        <translation>Eine optionale Nachricht anhängen an die Zahlungsaufforderung, die bei der Eröffnung der Anforderung angezeigt wird. Hinweis: Die Nachricht wird nicht mit der Zahlung über das Helium-Netzwerk gesendet.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Squorum network.</source>
+        <translation>Eine optionale Nachricht anhängen an die Zahlungsaufforderung, die bei der Eröffnung der Anforderung angezeigt wird. Hinweis: Die Nachricht wird nicht mit der Zahlung über das Squorum-Netzwerk gesendet.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Helium network.</source>
-        <translation>Eine optionale Nachricht anhängen an die Zahlungsaufforderung, die bei der Eröffnung der Anforderung angezeigt wird.&lt;br&gt;Hinweis: Die Nachricht wird nicht mit der Zahlung über das Helium-Netzwerk gesendet.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Squorum network.</source>
+        <translation>Eine optionale Nachricht anhängen an die Zahlungsaufforderung, die bei der Eröffnung der Anforderung angezeigt wird.&lt;br&gt;Hinweis: Die Nachricht wird nicht mit der Zahlung über das Squorum-Netzwerk gesendet.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -3063,7 +3063,7 @@ Bitte haben Sie Geduld...</translation>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>HLMs überweisen</translation>
+        <translation>SQRs überweisen</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -3134,8 +3134,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>UTXO Größe:</translation>
     </message>
     <message>
-        <source>0 HLM</source>
-        <translation>0 HLM</translation>
+        <source>0 SQR</source>
+        <translation>0 SQR</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3186,16 +3186,16 @@ Bitte haben Sie Geduld...</translation>
         <translation>Coins automatisch ausgewählt</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uHLMs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uHLMs in fee,&lt;br /&gt;while "at least" pays 1000 uHLMs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Wenn die kundenspezifische Gebühr auf 1000 uHLMs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uHLMs an Gebühr,&lt;br /&gt;während man "mindestens" 1000 uHLMs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uSQRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uSQRs in fee,&lt;br /&gt;while "at least" pays 1000 uSQRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Wenn die kundenspezifische Gebühr auf 1000 uSQRs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uSQRs an Gebühr,&lt;br /&gt;während man "mindestens" 1000 uSQRs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uHLMs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uHLMs in fee,&lt;br /&gt;while "total at least" pays 1000 uHLMs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Wenn die kundenspezifische Gebühr auf 1000 uHLMs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uHLMs an Gebühr,&lt;br /&gt;während man "insgesamt mindestens" 1000 uHLMs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uSQRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uSQRs in fee,&lt;br /&gt;while "total at least" pays 1000 uSQRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Wenn die kundenspezifische Gebühr auf 1000 uSQRs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uSQRs an Gebühr,&lt;br /&gt;während man "insgesamt mindestens" 1000 uSQRs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Helium transactions than the network can process.</source>
-        <translation>Nur die minimale Gebühr zu zahlen ist nur gut, solange es weniger Transaktionsvolumen als Platz in den Blocken ist.&lt;br /&gt;Aber sein Sie sich bewusst, dass dies am Ende in einer niemals bestätigende Transaktion endet, sobald es mehr Nachfrage nach Helium-Transaktionen gibt, als das Netzwerk verarbeiten kann.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Squorum transactions than the network can process.</source>
+        <translation>Nur die minimale Gebühr zu zahlen ist nur gut, solange es weniger Transaktionsvolumen als Platz in den Blocken ist.&lt;br /&gt;Aber sein Sie sich bewusst, dass dies am Ende in einer niemals bestätigende Transaktion endet, sobald es mehr Nachfrage nach Squorum-Transaktionen gibt, als das Netzwerk verarbeiten kann.</translation>
     </message>
     <message>
         <source>normal</source>
@@ -3242,8 +3242,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Empfänge&amp;r hinzufügen</translation>
     </message>
     <message>
-        <source>Anonymized HLM</source>
-        <translation>Anonymisierte HLM</translation>
+        <source>Anonymized SQR</source>
+        <translation>Anonymisierte SQR</translation>
     </message>
     <message>
         <source>SwiftTX</source>
@@ -3302,8 +3302,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>anonyme Mittel</translation>
     </message>
     <message>
-        <source>Warning: Invalid Helium address</source>
-        <translation>Warnung: Ungültige Helium-Adresse</translation>
+        <source>Warning: Invalid Squorum address</source>
+        <translation>Warnung: Ungültige Squorum-Adresse</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -3409,8 +3409,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>E&amp;mpfänger:</translation>
     </message>
     <message>
-        <source>The Helium address to send the payment to</source>
-        <translation>Helium-Adresse, an die überwiesen werden soll</translation>
+        <source>The Squorum address to send the payment to</source>
+        <translation>Squorum-Adresse, an die überwiesen werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3449,8 +3449,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Nachricht:</translation>
     </message>
     <message>
-        <source>A message that was attached to the Helium: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Helium network.</source>
-        <translation>Eine an die Helium-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Helium-Netzwerk gesendet.</translation>
+        <source>A message that was attached to the Squorum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Squorum network.</source>
+        <translation>Eine an die Squorum-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Squorum-Netzwerk gesendet.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -3476,8 +3476,8 @@ Bitte haben Sie Geduld...</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Helium Core is shutting down...</source>
-        <translation>Helium Core wird beendet...</translation>
+        <source>Squorum Core is shutting down...</source>
+        <translation>Squorum Core wird beendet...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -3499,8 +3499,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Sie können Nachrichten mit Ihren Adressen signieren, um zu beweisen, dass Sie sie besitzen. Sein Sie vorsichtig nichts nebulöses zu unterschreiben, da Phishing-Angriffe versuchen können, Sie dazu zu bringen, Ihre Identität zu denen zu untergeben. Unterschreiben Sie nur ganz detaillierte Aussagen, denen Sie zustimmen.</translation>
     </message>
     <message>
-        <source>The Helium address to sign the message with</source>
-        <translation>Helium Adresse mit welcher die Nachricht signiert werden soll</translation>
+        <source>The Squorum address to sign the message with</source>
+        <translation>Squorum Adresse mit welcher die Nachricht signiert werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3531,16 +3531,16 @@ Bitte haben Sie Geduld...</translation>
         <translation>Kopiert die aktuelle Signatur in den Zwischenspeicher</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Helium address</source>
-        <translation>Signiere die Nachricht um zu Beweisen, dass du diese Helium Adresse besitzt</translation>
+        <source>Sign the message to prove you own this Squorum address</source>
+        <translation>Signiere die Nachricht um zu Beweisen, dass du diese Squorum Adresse besitzt</translation>
     </message>
     <message>
-        <source>The Helium address the message was signed with</source>
-        <translation>Die Helium Adresse mit welcher die Nachricht signiert wurde.</translation>
+        <source>The Squorum address the message was signed with</source>
+        <translation>Die Squorum Adresse mit welcher die Nachricht signiert wurde.</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Helium address</source>
-        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen Helium-Adresse signiert wurde.</translation>
+        <source>Verify the message to ensure it was signed with the specified Squorum address</source>
+        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen Squorum-Adresse signiert wurde.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3626,8 +3626,8 @@ Bitte haben Sie Geduld...</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Squorum Core</source>
+        <translation>Squorum Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -3642,8 +3642,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Die Dash Core Entwickler</translation>
     </message>
     <message>
-        <source>The Helium Core developers</source>
-        <translation>Die Helium Core Entwickler</translation>
+        <source>The Squorum Core developers</source>
+        <translation>Die Squorum Core Entwickler</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -3817,7 +3817,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Erzeugte HLMs müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in "nicht angenommen" geändert und Sie werden keine HLMs gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
+        <translation>Erzeugte SQRs müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in "nicht angenommen" geändert und Sie werden keine SQRs gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -3962,32 +3962,32 @@ Bitte haben Sie Geduld...</translation>
         <translation>Verschleiert</translation>
     </message>
     <message>
-        <source>Converted Piv to zHelium</source>
-        <translation>Umgewandeltes HLM zu zHLM</translation>
+        <source>Converted Piv to zSquorum</source>
+        <translation>Umgewandeltes SQR zu zSQR</translation>
     </message>
     <message>
-        <source>Spent zHelium</source>
-        <translation>Ausgeben zHLM</translation>
+        <source>Spent zSquorum</source>
+        <translation>Ausgeben zSQR</translation>
     </message>
     <message>
-        <source>Received Piv from zHelium</source>
-        <translation>Empfangene HLM von zHLM</translation>
+        <source>Received Piv from zSquorum</source>
+        <translation>Empfangene SQR von zSQR</translation>
     </message>
     <message>
-        <source>Minted Change as zHelium from zHelium Spend</source>
-        <translation>Geprägtes Wechselgeld als zHLM von zHLM Ausgabe</translation>
+        <source>Minted Change as zSquorum from zSquorum Spend</source>
+        <translation>Geprägtes Wechselgeld als zSQR von zSQR Ausgabe</translation>
     </message>
     <message>
-        <source>Converted zHelium to Piv</source>
-        <translation>Umgewandeltes zHLM zu HLM</translation>
+        <source>Converted zSquorum to Piv</source>
+        <translation>Umgewandeltes zSQR zu SQR</translation>
     </message>
     <message>
         <source>watch-only</source>
         <translation>nur beobachtet</translation>
     </message>
     <message>
-        <source>zHelium Accumulator</source>
-        <translation>zHLM Speicher</translation>
+        <source>zSquorum Accumulator</source>
+        <translation>zSQR Speicher</translation>
     </message>
     <message>
         <source>(n/a)</source>
@@ -4097,8 +4097,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Masternode Vergütung</translation>
     </message>
     <message>
-        <source>Received Piv from zHelium</source>
-        <translation>Empfangen HLM von zHLM</translation>
+        <source>Received Piv from zSquorum</source>
+        <translation>Empfangen SQR von zSQR</translation>
     </message>
     <message>
         <source>Zerocoin Mint</source>
@@ -4109,8 +4109,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Zerocoin Ausgabe</translation>
     </message>
     <message>
-        <source>Zerocoin Spend, Change in zHelium</source>
-        <translation>Zerocoin Ausgabe, Wechselgeld in zHLM</translation>
+        <source>Zerocoin Spend, Change in zSquorum</source>
+        <translation>Zerocoin Ausgabe, Wechselgeld in zSQR</translation>
     </message>
     <message>
         <source>Zerocoin Spend to Self</source>
@@ -4231,11 +4231,11 @@ Bitte haben Sie Geduld...</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>HLMs überweisen</translation>
+        <translation>SQRs überweisen</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 HLM.</source>
-        <translation>SwiftTX unterstützt das Versenden von Beträgen dieser Höhe noch nicht. Transaktionen sind zur Zeit auf maximal %1 HLM begrenzt.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 SQR.</source>
+        <translation>SwiftTX unterstützt das Versenden von Beträgen dieser Höhe noch nicht. Transaktionen sind zur Zeit auf maximal %1 SQR begrenzt.</translation>
     </message>
 </context>
 <context>
@@ -4278,10 +4278,10 @@ Bitte haben Sie Geduld...</translation>
     </message>
 </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>ZSquorumControlDialog</name>
     <message>
-        <source>Select zHelium to Spend</source>
-        <translation>Auswahl zHLM als Ausgabe</translation>
+        <source>Select zSquorum to Spend</source>
+        <translation>Auswahl zSQR als Ausgabe</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -4292,8 +4292,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>0</translation>
     </message>
     <message>
-        <source>zHelium</source>
-        <translation>zHLM</translation>
+        <source>zSquorum</source>
+        <translation>zSQR</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>
@@ -4305,7 +4305,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
 </context>
 <context>
-    <name>helium-core</name>
+    <name>squorum-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = behalte Tx-Meta-Daten z.B. Betrag, Besitzer und Zahlungsanforderungsinformationen, 2 = verwerfe Tx-Meta-Daten)</translation>
@@ -4323,8 +4323,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Der berechnete Akkumulator-Checkpoint ist nicht das, was vom Blockindex aufgezeichnet wurde</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Helium Core is probably already running.</source>
-        <translation>Kann keine Sperre für das Datenverzeichnis %s erhalten. Helium Core läuft wahrscheinlich bereits.</translation>
+        <source>Cannot obtain a lock on data directory %s. Squorum Core is probably already running.</source>
+        <translation>Kann keine Sperre für das Datenverzeichnis %s erhalten. Squorum Core läuft wahrscheinlich bereits.</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -4335,8 +4335,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Lösche alle Wallet-Transaktionen und stelle nur diese Teile der Blockchain wieder her durch -neuscan beim Start</translation>
     </message>
     <message>
-        <source>Disable all Helium specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
-        <translation>Deaktiviere alle Helium-spezifischen Funktionen (Masternodes, Verschleierung, SwiftTX, Budgetplanung) (0-1, default: %u)</translation>
+        <source>Disable all Squorum specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <translation>Deaktiviere alle Squorum-spezifischen Funktionen (Masternodes, Verschleierung, SwiftTX, Budgetplanung) (0-1, default: %u)</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
@@ -4379,12 +4379,12 @@ Bitte haben Sie Geduld...</translation>
         <translation>Befehl ausführen, wenn sich der beste Block ändert (%s in cmd wird durch Blockhash ersetzt)</translation>
     </message>
     <message>
-        <source>Fees (in HLM/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Gebühren (in HLM/kB) kleiner als diese gelten als Null-Gebühr für die Weiterleitung (default: %s)</translation>
+        <source>Fees (in SQR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Gebühren (in SQR/kB) kleiner als diese gelten als Null-Gebühr für die Weiterleitung (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in HLM/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Gebühren (in HLM/kB) kleiner als diese werden als Null-Gebühr für die Transaktionserstellung betrachtet (default: %s)</translation>
+        <source>Fees (in SQR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Gebühren (in SQR/kB) kleiner als diese werden als Null-Gebühr für die Transaktionserstellung betrachtet (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -4455,8 +4455,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Copyright (C) 2014-%i The Dash Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The Helium Core Developers</source>
-        <translation>Copyright (C) 2015-%i The Helium Core Developers</translation>
+        <source>Copyright (C) 2015-%i The Squorum Core Developers</source>
+        <translation>Copyright (C) 2015-%i The Squorum Core Developers</translation>
     </message>
     <message>
         <source>Error</source>
@@ -4491,8 +4491,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Hinweis</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Helium Core is shutting down.</source>
-        <translation>Initialisierung Sanity-Check fehlgeschlagen. Helium Core schaltet ab.</translation>
+        <source>Initialization sanity check failed. Squorum Core is shutting down.</source>
+        <translation>Initialisierung Sanity-Check fehlgeschlagen. Squorum Core schaltet ab.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -4783,8 +4783,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Wallet gesperrt.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Helium Core to complete</source>
-        <translation>Wallet musste neu geschrieben werden: Bitte Helium Core neu starten</translation>
+        <source>Wallet needed to be rewritten: restart Squorum Core to complete</source>
+        <translation>Wallet musste neu geschrieben werden: Bitte Squorum Core neu starten</translation>
     </message>
     <message>
         <source>Wallet options:</source>

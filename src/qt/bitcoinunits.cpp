@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The XBTC developers
-// Copyright (c) 2018 The Helium developers
+// Copyright (c) 2018 The Squorum developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -57,22 +57,22 @@ QString BitcoinUnits::name(int unit)
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
         case BTC:
-            return QString("HLM");
+            return QString("SQR");
         case mBTC:
-            return QString("mHLM");
+            return QString("mSQR");
         case uBTC:
-            return QString::fromUtf8("μHLM");
+            return QString::fromUtf8("μSQR");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
         case BTC:
-            return QString("tHLM");
+            return QString("tSQR");
         case mBTC:
-            return QString("mtHLM");
+            return QString("mtSQR");
         case uBTC:
-            return QString::fromUtf8("μtHLM");
+            return QString::fromUtf8("μtSQR");
         default:
             return QString("???");
         }
@@ -84,22 +84,22 @@ QString BitcoinUnits::description(int unit)
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
         case BTC:
-            return QString("HLM");
+            return QString("SQR");
         case mBTC:
-            return QString("Milli-HLM (1 / 1" THIN_SP_UTF8 "000)");
+            return QString("Milli-SQR (1 / 1" THIN_SP_UTF8 "000)");
         case uBTC:
-            return QString("Micro-HLM (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            return QString("Micro-SQR (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
         case BTC:
-            return QString("TestHLMs");
+            return QString("TestSQRs");
         case mBTC:
-            return QString("Milli-TestHLM (1 / 1" THIN_SP_UTF8 "000)");
+            return QString("Milli-TestSQR (1 / 1" THIN_SP_UTF8 "000)");
         case uBTC:
-            return QString("Micro-TestHLM (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            return QString("Micro-TestSQR (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }

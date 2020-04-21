@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The Helium developers
+// Copyright (c) 2018 The Squorum developers
 
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -87,7 +87,7 @@ UniValue getnewaddress(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getnewaddress ( \"account\" )\n"
-            "\nReturns a new Helium address for receiving payments.\n"
+            "\nReturns a new Squorum address for receiving payments.\n"
             "If 'account' is specified (recommended), it is added to the address book \n"
             "so payments received with the address will be credited to 'account'.\n"
 
@@ -161,7 +161,7 @@ UniValue getaccountaddress(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 1)
         throw runtime_error(
             "getaccountaddress \"account\"\n"
-            "\nReturns the current Helium address for receiving payments to this account.\n"
+            "\nReturns the current Squorum address for receiving payments to this account.\n"
             "\nArguments:\n"
             "1. \"account\"       (string, required) The account name for the address. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created and a new address created  if there is no account by the given name.\n"
 
@@ -188,7 +188,7 @@ UniValue getrawchangeaddress(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getrawchangeaddress\n"
-            "\nReturns a new Helium address, for receiving change.\n"
+            "\nReturns a new Squorum address, for receiving change.\n"
             "This is for use with raw transactions, NOT normal use.\n"
 
             "\nResult:\n"
@@ -233,7 +233,7 @@ UniValue setaccount(const UniValue& params, bool fHelp)
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Helium address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Squorum address");
 
 
     string strAccount;
@@ -275,7 +275,7 @@ UniValue getaccount(const UniValue& params, bool fHelp)
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Helium address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Squorum address");
 
     string strAccount;
     map<CTxDestination, CAddressBookData>::iterator mi = pwalletMain->mapAddressBook.find(address.Get());
@@ -335,7 +335,7 @@ void SendMoney(const CTxDestination& address, CAmount nValue, CWalletTx& wtxNew,
         throw JSONRPCError(RPC_WALLET_ERROR, strError);
     }
 
-    // Parse Helium address
+    // Parse Squorum address
     CScript scriptPubKey = GetScriptForDestination(address);
 
     // Create and send the transaction
@@ -361,7 +361,7 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
 
             "\nArguments:\n"
             "1. \"address\"  (string, required) The address to send to.\n"
-            "2. \"amount\"      (numeric, required) The amount in HLM to send. eg 0.1\n"
+            "2. \"amount\"      (numeric, required) The amount in SQR to send. eg 0.1\n"
             "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
             "                             This is not part of the transaction, just kept in your wallet.\n"
             "4. \"comment-to\"  (string, optional) A comment to store the name of the person or organization \n"
@@ -380,7 +380,7 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Helium address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Squorum address");
 
     // Amount
     CAmount nAmount = AmountFromValue(params[1]);
@@ -409,7 +409,7 @@ UniValue sendtoaddressix(const UniValue& params, bool fHelp)
 
             "\nArguments:\n"
             "1. \"address\"  (string, required) The address to send to.\n"
-            "2. \"amount\"      (numeric, required) The amount in HLM to send. eg 0.1\n"
+            "2. \"amount\"      (numeric, required) The amount in SQR to send. eg 0.1\n"
             "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
             "                             This is not part of the transaction, just kept in your wallet.\n"
             "4. \"comment-to\"  (string, optional) A comment to store the name of the person or organization \n"
@@ -428,7 +428,7 @@ UniValue sendtoaddressix(const UniValue& params, bool fHelp)
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Helium address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Squorum address");
 
     // Amount
     CAmount nAmount = AmountFromValue(params[1]);
@@ -461,7 +461,7 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp)
             "  [\n"
             "    [\n"
             "      \"address\",     (string) The address\n"
-            "      amount,                 (numeric) The amount in HLM\n"
+            "      amount,                 (numeric) The amount in SQR\n"
             "      \"account\"             (string, optional) The account\n"
             "    ]\n"
             "    ,...\n"
@@ -560,7 +560,7 @@ UniValue getreceivedbyaddress(const UniValue& params, bool fHelp)
             "2. minconf             (numeric, optional, default=1) Only include transactions confirmed at least this many times.\n"
 
             "\nResult:\n"
-            "amount   (numeric) The total amount in HLM received at this address.\n"
+            "amount   (numeric) The total amount in SQR received at this address.\n"
 
             "\nExamples:\n"
             "\nThe amount from transactions with at least 1 confirmation\n" +
@@ -577,7 +577,7 @@ UniValue getreceivedbyaddress(const UniValue& params, bool fHelp)
     // address
     CBitcoinAddress address = CBitcoinAddress(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Helium address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Squorum address");
     CScript scriptPubKey = GetScriptForDestination(address.Get());
     if (!IsMine(*pwalletMain, scriptPubKey))
         return (double)0.0;
@@ -859,7 +859,7 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
             "\nArguments:\n"
             "1. \"fromaccount\"       (string, required) The name of the account to send funds from. May be the default account using \"\".\n"
             "2. \"topaddress\"  (string, required) The address to send funds to.\n"
-            "3. amount                (numeric, required) The amount in HLM. (transaction fee is added on top).\n"
+            "3. amount                (numeric, required) The amount in SQR. (transaction fee is added on top).\n"
             "4. minconf               (numeric, optional, default=1) Only use funds with at least this many confirmations.\n"
             "5. \"comment\"           (string, optional) A comment used to store what the transaction is for. \n"
             "                                     This is not part of the transaction, just kept in your wallet.\n"
@@ -883,7 +883,7 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
     string strAccount = AccountFromValue(params[0]);
     CBitcoinAddress address(params[1].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Helium address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Squorum address");
     CAmount nAmount = AmountFromValue(params[2]);
     int nMinDepth = 1;
     if (params.size() > 3)
@@ -921,7 +921,7 @@ UniValue sendmany(const UniValue& params, bool fHelp)
             "1. \"fromaccount\"         (string, required) The account to send the funds from, can be \"\" for the default account\n"
             "2. \"amounts\"             (string, required) A json object with addresses and amounts\n"
             "    {\n"
-            "      \"address\":amount   (numeric) The address is the key, the numeric amount in HLM is the value\n"
+            "      \"address\":amount   (numeric) The address is the key, the numeric amount in SQR is the value\n"
             "      ,...\n"
             "    }\n"
             "3. minconf                 (numeric, optional, default=1) Only use the balance confirmed at least this many times.\n"
@@ -960,7 +960,7 @@ UniValue sendmany(const UniValue& params, bool fHelp)
     BOOST_FOREACH(const string& name_, keys) {
         CBitcoinAddress address(name_);
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Helium address: ")+name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid Squorum address: ")+name_);
 
         if (setAddress.count(address))
             throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+name_);
@@ -1002,7 +1002,7 @@ UniValue addmultisigaddress(const UniValue& params, bool fHelp)
         throw runtime_error(
             "addmultisigaddress nrequired [\"key\",...] ( \"account\" )\n"
             "\nAdd a nrequired-to-sign multisignature address to the wallet.\n"
-            "Each key is a Helium address or hex-encoded public key.\n"
+            "Each key is a Squorum address or hex-encoded public key.\n"
             "If 'account' is specified, assign address to that account.\n"
 
             "\nArguments:\n"
@@ -1754,7 +1754,7 @@ UniValue walletpassphrase(const UniValue& params, bool fHelp)
         throw runtime_error(
             "walletpassphrase \"passphrase\" timeout ( anonymizeonly )\n"
             "\nStores the wallet decryption key in memory for 'timeout' seconds.\n"
-            "This is needed prior to performing transactions related to private keys such as sending HLM\n"
+            "This is needed prior to performing transactions related to private keys such as sending SQR\n"
             "\nArguments:\n"
             "1. \"passphrase\"     (string, required) The wallet passphrase\n"
             "2. timeout            (numeric, required) The time to keep the decryption key in seconds.\n"
@@ -1910,7 +1910,7 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             "\nEncrypt you wallet\n" +
             HelpExampleCli("encryptwallet", "\"my pass phrase\"") +
-            "\nNow set the passphrase to use the wallet, such as for signing or sending HLM\n" +
+            "\nNow set the passphrase to use the wallet, such as for signing or sending SQR\n" +
             HelpExampleCli("walletpassphrase", "\"my pass phrase\"") +
             "\nNow we can so something like sign\n" +
             HelpExampleCli("signmessage", "\"address\" \"test message\"") +
@@ -1944,7 +1944,7 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
     // slack space in .dat files; that is bad if the old data is
     // unencrypted private keys. So:
     StartShutdown();
-    return "wallet encrypted; Helium Core server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
+    return "wallet encrypted; Squorum Core server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
 }
 
 UniValue lockunspent(const UniValue& params, bool fHelp)
@@ -1954,7 +1954,7 @@ UniValue lockunspent(const UniValue& params, bool fHelp)
             "lockunspent unlock [{\"txid\":\"txid\",\"vout\":n},...]\n"
             "\nUpdates list of temporarily unspendable outputs.\n"
             "Temporarily lock (unlock=false) or unlock (unlock=true) specified transaction outputs.\n"
-            "A locked transaction output will not be chosen by automatic coin selection, when spending HLMs.\n"
+            "A locked transaction output will not be chosen by automatic coin selection, when spending SQRs.\n"
             "Locks are stored in memory only. Nodes start with zero locked outputs, and the locked output list\n"
             "is always cleared (by virtue of process exit) when a node stops or fails.\n"
             "Also see the listunspent call\n"
@@ -2083,7 +2083,7 @@ UniValue settxfee(const UniValue& params, bool fHelp)
             "\nSet the transaction fee per kB.\n"
 
             "\nArguments:\n"
-            "1. amount         (numeric, required) The transaction fee in HLM/kB rounded to the nearest 0.00000001\n"
+            "1. amount         (numeric, required) The transaction fee in SQR/kB rounded to the nearest 0.00000001\n"
             "\nResult\n"
             "true|false        (boolean) Returns true if successful\n"
             "\nExamples:\n" +
@@ -2110,7 +2110,7 @@ UniValue getwalletinfo(const UniValue& params, bool fHelp)
             "\nResult:\n"
             "{\n"
             "  \"walletversion\": xxxxx,     (numeric) the wallet version\n"
-            "  \"balance\": xxxxxxx,         (numeric) the total HLM balance of the wallet\n"
+            "  \"balance\": xxxxxxx,         (numeric) the total SQR balance of the wallet\n"
             "  \"txcount\": xxxxxxx,         (numeric) the total number of transactions in the wallet\n"
             "  \"keypoololdest\": xxxxxx,    (numeric) the timestamp (seconds since GMT epoch) of the oldest pre-generated key in the key pool\n"
             "  \"keypoolsize\": xxxx,        (numeric) how many new keys are pre-generated\n"
@@ -2459,7 +2459,7 @@ UniValue multisend(const UniValue& params, bool fHelp)
             "The MultiSend transaction is sent when the staked coins mature (100 confirmations)\n"
             "****************************************************************\n"
             "TO CREATE OR ADD TO THE MULTISEND VECTOR:\n"
-            "multisend <Helium Address> <percent>\n"
+            "multisend <Squorum Address> <percent>\n"
             "This will add a new address to the MultiSend vector\n"
             "Percent is a whole number 1 to 100.\n"
             "****************************************************************\n"
@@ -2478,7 +2478,7 @@ UniValue multisend(const UniValue& params, bool fHelp)
     string strAddress = params[0].get_str();
     CBitcoinAddress address(strAddress);
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid HLM address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid SQR address");
     if (boost::lexical_cast<int>(params[1].get_str()) < 0)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, expected valid percentage");
     if (pwalletMain->IsLocked())
@@ -2523,11 +2523,11 @@ UniValue getzerocoinbalance(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "getzerocoinbalance\n"
-            "\nReturn the wallet's total zHLM balance.\n" +
+            "\nReturn the wallet's total zSQR balance.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult:\n"
-            "amount         (numeric) Total zHLM balance.\n"
+            "amount         (numeric) Total zSQR balance.\n"
 
             "\nExamples:\n" +
             HelpExampleCli("getzerocoinbalance", "") + HelpExampleRpc("getzerocoinbalance", ""));
@@ -2551,7 +2551,7 @@ UniValue listmintedzerocoins(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "listmintedzerocoins\n"
-            "\nList all zHLM mints in the wallet.\n" +
+            "\nList all zSQR mints in the wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult:\n"
@@ -2627,7 +2627,7 @@ UniValue listspentzerocoins(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "listspentzerocoins\n"
-            "\nList all the spent zHLM mints in the wallet.\n" +
+            "\nList all the spent zSQR mints in the wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult:\n"
@@ -2659,11 +2659,11 @@ UniValue mintzerocoin(const UniValue& params, bool fHelp)
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
             "mintzerocoin amount ( utxos )\n"
-            "\nMint the specified zHLM amount\n" +
+            "\nMint the specified zSQR amount\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. amount      (numeric, required) Enter an amount of Helium to convert to zHLM\n"
+            "1. amount      (numeric, required) Enter an amount of Squorum to convert to zSQR\n"
             "2. utxos       (string, optional) A json array of objects.\n"
             "                   Each object needs the txid (string) and vout (numeric)\n"
             "  [\n"
@@ -2707,7 +2707,7 @@ UniValue mintzerocoin(const UniValue& params, bool fHelp)
 
     int64_t nTime = GetTimeMillis();
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE))
-        throw JSONRPCError(RPC_WALLET_ERROR, "zHLM is currently disabled due to maintenance.");
+        throw JSONRPCError(RPC_WALLET_ERROR, "zSQR is currently disabled due to maintenance.");
 
     EnsureWalletIsUnlocked(true);
 
@@ -2770,7 +2770,7 @@ UniValue spendzerocoin(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 5 || params.size() < 4)
         throw runtime_error(
             "spendzerocoin amount mintchange minimizechange securitylevel ( \"address\" )\n"
-            "\nSpend zHLM to a Helium address.\n" +
+            "\nSpend zSQR to a Squorum address.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
@@ -2801,7 +2801,7 @@ UniValue spendzerocoin(const UniValue& params, bool fHelp)
             "  ],\n"
             "  \"outputs\": [                 (array) JSON array of output objects.\n"
             "    {\n"
-            "      \"value\": amount,         (numeric) Value in HLM.\n"
+            "      \"value\": amount,         (numeric) Value in SQR.\n"
             "      \"address\": \"xxx\"         (string) address or \"zerocoinmint\" for reminted change.\n"
             "    }\n"
             "    ,...\n"
@@ -2815,13 +2815,13 @@ UniValue spendzerocoin(const UniValue& params, bool fHelp)
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE))
-        throw JSONRPCError(RPC_WALLET_ERROR, "zHLM is currently disabled due to maintenance.");
+        throw JSONRPCError(RPC_WALLET_ERROR, "zSQR is currently disabled due to maintenance.");
 
     EnsureWalletIsUnlocked();
 
     int64_t nTimeStart = GetTimeMillis();
     CAmount nAmount = AmountFromValue(params[0]);   // Spending amount
-    bool fMintChange = params[1].get_bool();        // Mint change to zHLM
+    bool fMintChange = params[1].get_bool();        // Mint change to zSQR
     bool fMinimizeChange = params[2].get_bool();    // Minimize change
     int nSecurityLevel = params[3].get_int();       // Security level
 
@@ -2831,7 +2831,7 @@ UniValue spendzerocoin(const UniValue& params, bool fHelp)
         // to avoid type confusion from the JSON interpreter
         address = CBitcoinAddress(params[4].get_str());
         if(!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Helium address");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Squorum address");
     }
 
     CWalletTx wtx;
@@ -3077,7 +3077,7 @@ UniValue exportzerocoins(const UniValue& params, bool fHelp)
 
             "\nArguments:\n"
             "1. \"include_spent\"        (bool, required) Include mints that have already been spent\n"
-            "2. \"denomination\"         (integer, optional) Export a specific denomination of zHLM\n"
+            "2. \"denomination\"         (integer, optional) Export a specific denomination of zSQR\n"
 
             "\nResult:\n"
             "[                   (array of json object)\n"
@@ -3089,8 +3089,8 @@ UniValue exportzerocoins(const UniValue& params, bool fHelp)
             "    \"t\": \"txid\",    (string) The txid that the coin was minted in\n"
             "    \"h\": n,         (numeric) The height the tx was added to the blockchain\n"
             "    \"u\": used,      (boolean) Whether the mint has been spent\n"
-            "    \"v\": version,   (numeric) The version of the zHLM\n"
-            "    \"k\": \"privkey\"  (string) The zHLM private key (V2+ zHLM only)\n"
+            "    \"v\": version,   (numeric) The version of the zSQR\n"
+            "    \"k\": \"privkey\"  (string) The zSQR private key (V2+ zSQR only)\n"
             "  }\n"
             "  ,...\n"
             "]\n"
@@ -3156,7 +3156,7 @@ UniValue importzerocoins(const UniValue& params, bool fHelp)
             "\nResult:\n"
             "{\n"
             "  \"added\": n,        (numeric) The quantity of zerocoin mints that were added\n"
-            "  \"value\": amount    (numeric) The total zHLM value of zerocoin mints that were added\n"
+            "  \"value\": amount    (numeric) The total zSQR value of zerocoin mints that were added\n"
             "}\n"
 
             "\nExamples\n" +
@@ -3236,7 +3236,7 @@ UniValue reconsiderzerocoins(const UniValue& params, bool fHelp)
     if(fHelp || !params.empty())
         throw runtime_error(
             "reconsiderzerocoins\n"
-            "\nCheck archived zHLM list to see if any mints were added to the blockchain.\n" +
+            "\nCheck archived zSQR list to see if any mints were added to the blockchain.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult:\n"
@@ -3287,11 +3287,11 @@ UniValue setzhlmseed(const UniValue& params, bool fHelp)
     if(fHelp || params.size() != 1)
         throw runtime_error(
             "setzhlmseed \"seed\"\n"
-            "\nSet the wallet's deterministic zHLM seed to a specific value.\n" +
+            "\nSet the wallet's deterministic zSQR seed to a specific value.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"seed\"        (string, required) The deterministic zHLM seed.\n"
+            "1. \"seed\"        (string, required) The deterministic zSQR seed.\n"
 
             "\nResult\n"
             "\"success\" : b,  (boolean) Whether the seed was successfully set.\n"
@@ -3321,11 +3321,11 @@ UniValue getzhlmseed(const UniValue& params, bool fHelp)
     if(fHelp || !params.empty())
         throw runtime_error(
             "getzhlmseed\n"
-            "\nCheck archived zHLM list to see if any mints were added to the blockchain.\n" +
+            "\nCheck archived zSQR list to see if any mints were added to the blockchain.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult\n"
-            "\"seed\" : s,  (string) The deterministic zHLM seed.\n"
+            "\"seed\" : s,  (string) The deterministic zSQR seed.\n"
 
             "\nExamples\n" +
             HelpExampleCli("getzhlmseed", "") + HelpExampleRpc("getzhlmseed", ""));
@@ -3346,12 +3346,12 @@ UniValue generatemintlist(const UniValue& params, bool fHelp)
     if(fHelp || params.size() != 2)
         throw runtime_error(
             "generatemintlist\n"
-            "\nShow mints that are derived from the deterministic zHLM seed.\n" +
+            "\nShow mints that are derived from the deterministic zSQR seed.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments\n"
-            "1. \"count\"  : n,  (numeric) Which sequential zHLM to start with.\n"
-            "2. \"range\"  : n,  (numeric) How many zHLM to generate.\n"
+            "1. \"count\"  : n,  (numeric) Which sequential zSQR to start with.\n"
+            "2. \"range\"  : n,  (numeric) How many zSQR to generate.\n"
 
             "\nResult:\n"
             "[\n"
@@ -3394,7 +3394,7 @@ UniValue dzhlmstate(const UniValue& params, bool fHelp) {
     if (fHelp || params.size() != 0)
         throw runtime_error(
                 "dzhlmstate\n"
-                        "\nThe current state of the mintpool of the deterministic zHLM wallet.\n" +
+                        "\nThe current state of the mintpool of the deterministic zSQR wallet.\n" +
                 HelpRequiringPassphrase() + "\n"
 
                         "\nExamples\n" +
@@ -3446,12 +3446,12 @@ UniValue searchdzhlm(const UniValue& params, bool fHelp)
     if(fHelp || params.size() != 3)
         throw runtime_error(
             "searchdzhlm\n"
-            "\nMake an extended search for deterministically generated zHLM that have not yet been recognized by the wallet.\n" +
+            "\nMake an extended search for deterministically generated zSQR that have not yet been recognized by the wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments\n"
-            "1. \"count\"       (numeric) Which sequential zHLM to start with.\n"
-            "2. \"range\"       (numeric) How many zHLM to generate.\n"
+            "1. \"count\"       (numeric) Which sequential zSQR to start with.\n"
+            "2. \"range\"       (numeric) How many zSQR to generate.\n"
             "3. \"threads\"     (numeric) How many threads should this operation consume.\n"
 
             "\nExamples\n" +

@@ -354,7 +354,7 @@
        <item row="16" column="0">
         <widget class="QPushButton" name="openDebugLogfileButton">
          <property name="toolTip">
-          <string>Open the Helium debug log file from the current data directory. This can take a few seconds for large log files.</string>
+          <string>Open the Squorum debug log file from the current data directory. This can take a few seconds for large log files.</string>
          </property>
          <property name="text">
           <string>&amp;Open</string>
@@ -1328,7 +1328,7 @@
        <item row="4" column="0">
         <widget class="QLabel" name="wallet_customzhlmbackuppath_label">
          <property name="text">
-          <string>Custom zHLM Backup Path:</string>
+          <string>Custom zSQR Backup Path:</string>
          </property>
          <property name="visible">
           <bool>false</bool>

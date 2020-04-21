@@ -1,40 +1,40 @@
-Helium Core
+Squorum Core
 =====================
 
 Setup
 ---------------------
-[Helium Core](http://heliumchain.org/wallet) is the original Helium client and it builds the backbone of the network. However, it downloads and stores the entire history of Helium transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[Squorum Core](http://heliumchain.org/wallet) is the original Squorum client and it builds the backbone of the network. However, it downloads and stores the entire history of Squorum transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Helium on your native platform.
+The following are some helpful notes on how to run Squorum on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- bin/32/helium-qt (GUI, 32-bit) or bin/32/heliumd (headless, 32-bit)
-- bin/64/helium-qt (GUI, 64-bit) or bin/64/heliumd (headless, 64-bit)
+- bin/32/squorum-qt (GUI, 32-bit) or bin/32/squorumd (headless, 32-bit)
+- bin/64/squorum-qt (GUI, 64-bit) or bin/64/squorumd (headless, 64-bit)
 
 ### Windows
 
-Unpack the files into a directory, and then run helium-qt.exe.
+Unpack the files into a directory, and then run squorum-qt.exe.
 
 ### OSX
 
-Drag Helium-Qt to your applications folder, and then run Helium-Qt.
+Drag Squorum-Qt to your applications folder, and then run Squorum-Qt.
 
 ### Need Help?
 
-* See the documentation at the [Helium Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
+* See the documentation at the [Squorum Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [Helium Forum](http://forum.heliumlabs.org/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [Squorum Forum](http://forum.squorumlabs.org/).
 * Join our Discord server [Discord Server](https://discord.heliumchain.org)
-* Join one of our Slack groups [Helium Slack Groups](https://heliumchain.org/slack-logins/) (Main community is replaced by Discord).
+* Join one of our Slack groups [Squorum Slack Groups](https://heliumchain.org/slack-logins/) (Main community is replaced by Discord).
 
 Building
 ---------------------
-The following are developer notes on how to build Helium on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Squorum on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -42,7 +42,7 @@ The following are developer notes on how to build Helium on your native platform
 
 Development
 ---------------------
-The Pivx repo's [root README](https://github.com/Helium-Project/Helium/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Pivx repo's [root README](https://github.com/heliumchain/helium/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -56,8 +56,8 @@ The Pivx repo's [root README](https://github.com/Helium-Project/Helium/blob/mast
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [Helium](http://forum.heliumlabs.org/) forum.
-* Join the [Helium-Dev](https://helium-dev.slack.com/) Slack group ([Sign-Up](https://helium-dev.herokuapp.com/)).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [Squorum](http://forum.squorumlabs.org/) forum.
+* Join the [Squorum-Dev](https://squorum-dev.slack.com/) Slack group ([Sign-Up](https://squorum-dev.herokuapp.com/)).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
