@@ -40,7 +40,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle* networkStyle) 
     QString copyrightTextBtc = QChar(0xA9) + QString(" 2009-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Bitcoin Core developers"));
     QString copyrightTextDash = QChar(0xA9) + QString(" 2014-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Dash Core developers"));
     QString copyrightTextPIVX = QChar(0xA9) + QString(" 2015-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Pivx Core developers"));
-    QString copyrightTextHelium = QChar(0xA9) + QString(" 2018-2020 ") + QString(tr("The Helium Core developers"));
+    QString copyrightTextHelium = QChar(0xA9) + QString(" 2018-2020 ").arg(COPYRIGHT_YEAR) + QString(tr("The Helium Core developers"));
     QString copyrightTextSQR = QChar(0xA9) + QString(" 2020-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The sQuorum Core developers"));
     QString titleAddText = networkStyle->getTitleAddText();
 
