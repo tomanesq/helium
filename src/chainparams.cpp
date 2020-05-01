@@ -190,7 +190,7 @@ public:
         assert(hashGenesisBlock == uint256("0x0000033346b0b31697bcd178789fe1d6d10f96a7fd46d74fbf647d5ea3757348"));
         assert(genesis.hashMerkleRoot == uint256("0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd"));
 
-        vSeeds.push_back(CDNSSeedData("knout", "dnsseed.squorum.cl"));
+        vSeeds.push_back(CDNSSeedData("knout", "dnsseed.helium.cl"));
 
         // sQuorum addresses start with 'S'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63);
@@ -303,7 +303,7 @@ public:
         vSeeds.clear();
 
         vSeeds.push_back(CDNSSeedData("heliumlabs", "seed.heliumlabs.org"));
-        vSeeds.push_back(CDNSSeedData("Spread", "node.squorumcha.in"));
+        vSeeds.push_back(CDNSSeedData("Spread", "node.heliumcha.in"));
         vSeeds.push_back(CDNSSeedData("Kserv", "149.28.242.177"));
         vSeeds.push_back(CDNSSeedData("Xojserv", "45.63.83.41"));
 
