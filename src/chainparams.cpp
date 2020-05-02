@@ -304,7 +304,7 @@ public:
         vSeeds.clear();
 
         vSeeds.push_back(CDNSSeedData("heliumlabs", "seed.heliumlabs.org"));
-        vSeeds.push_back(CDNSSeedData("Spread", "node.squorumcha.in"));
+        vSeeds.push_back(CDNSSeedData("Spread", "node.heliumcha.in"));
         vSeeds.push_back(CDNSSeedData("Kserv", "149.28.242.177"));
         vSeeds.push_back(CDNSSeedData("Xojserv", "45.63.83.41"));
 
